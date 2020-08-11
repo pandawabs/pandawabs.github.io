@@ -7,7 +7,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Pandawa Sudewa</title>
-        <meta name="description" content="Pandawa Sudewa Curriculum Vitae">
+        <meta name="description" content="Pandawa Sudewa Resume">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="favicon.png" />
         <link rel="apple-touch-icon" href="favicon.png" />
@@ -15,9 +15,10 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     
         <!-- Custom styles for this template -->
-        <link href="assets/css/loader.css" rel="stylesheet">
-        <link href="assets/css/loading-bar.min.css" rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/gh/loadingio/transition.css@v2.0.0/dist/transition.min.css" rel="stylesheet">
+        <link href="assets/css/loader.min.css" rel="stylesheet" integrity="sha384-pSnHyomI7OFfXvM15mngdhLR2GByQQ2W4tORP7Txd83nvNauRSPghHpMiUSopYkU">
+        <!-- <link href="assets/css/loader.css" rel="stylesheet"> -->
+        <link href="assets/css/loading-bar.min.css" rel="stylesheet" integrity="sha394-NQcfbOhbXNl4bjX9l3HMWnGwDDCYnPpMgx6ZAVyFbI3KF9lTnia6ekUsfSiaCAM/">
+        <link href="https://cdn.jsdelivr.net/gh/loadingio/transition.css@v2.0.0/dist/transition.min.css" rel="stylesheet" integrity="sha384-ljGUgVDDPQplpO+1JGkznO8Rxk+bX+/6aTMbxgvnDdRFuMEXEhMVJTPX5DYx6eTE" crossorigin="anonymous">
     </head>
     <body class="w-100 h-100 d-flex align-items-center flex-column text-center">
         <!--[if lt IE 7]>
@@ -28,7 +29,7 @@
                 <div class="loader-bar"
                     style="width:100%;height:5em"
                     data-value="0"
-                    data-duration="0.1"
+                    data-duration="0.5"
                     data-stroke="#1a1a1a"
                     data-stroke-width="2.71493125"
                     data-stroke-trail="#808080"
@@ -40,62 +41,15 @@
 
         <div class="main-container"></div>
 
-        <script src="assets/js/loading-bar.min.js"></script>
+        <script src="assets/js/loading-bar.min.js" integrity="sha384-BEnft1rDqn2qbcfPXQwBT8uCK9TlVu3wewhOJacjMTfBN2n2QOyjzigCJtL/t8z5"></script>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-        <script src="https://kit.fontawesome.com/463e2fadbc.js" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
-        <script>
-            var __pdata;
-
-            $(document).ready( function(){
-                
-                var loadingBar = new ldBar('.loader-bar', {
-                        'data-type':'stroke',
-                        'data-fill-dir':'ltr'
-                    });
-                
-                var loadMainPage = function() {
-                    return axios.request({
-                        url: 'main.html',
-                        method: 'get',
-                        timeout: 60000,
-                        onDownloadProgress: function(e) {
-                            if(e.lengthComputable){
-                                loadingBar.set((e.loaded/e.total) * 100);
-                            }
-                        }
-                    });
-                };
-
-                var loadPersonalData = function() {
-                    return axios.get('assets/file/cv_2020.json', {responseType: 'json'});
-                };
-                
-                Promise.all([loadPersonalData(),loadMainPage()]).then(function (responses) {
-                    
-                    loadingBar.set(100);
-                    __pdata = responses[0].data;
-                    $('.main-container').html(responses[1].data);
-
-                    var anim = {
-                        'animation-duration':'0.6s',
-                        'animation-delay':'1.75s'
-                    };
-                    
-                    var hide = setTimeout(() => {
-                        $('.loader-container').hide();    
-                    }, 2500);
-
-                    $('.loader-container').addClass('ld ld-fade-out').css(anim);
-                })
-                .catch(function (error) {
-                    console.log(error);
-                });
-            });
-        </script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" integrity="sha384-3zW4Ss6nBzDaj/vvjP2Qwu5xaWAzOgTSccYj0DfBO/5tDzQksJa+tWrYMlYPM00u" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue" integrity="sha384-OZmxTjkv7EQo5XDMPAmIkkvywVeXw59YyYh6zq8UKfkbor13jS+5p8qMTBSA1q+F" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/463e2fadbc.js" integrity="sha384-eoEIP4kL867FWM1D0Gem6jxjxMlsD5jiBy1lo9hB45B9e6PLQZ96UxgVowiBgMxx" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js" integrity="sha384-2B/wBCdjAUU/YBoPNyeMGxfXWhtxcQaDnAg02ilzQ6Y2Zqq9XalRKILiKDNj75ow" crossorigin="anonymous"></script>
+        <script src="assets/js/loader.min.js" integrity="sha384-gL2a3LVC90wbJxWR4BaUvdLRzZhkw3NFcChUvNzZRIbrEnh194gM6F/G6XCA++cf"></script>
+        <!-- <script src="assets/js/loader.js"></script> -->
     </body>
 </html>
