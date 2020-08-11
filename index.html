@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js w-100 h-100"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Pandawa Sudewa</title>
+        <meta name="description" content="Pandawa Sudewa Curriculum Vitae">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="favicon.png" />
+        <link rel="apple-touch-icon" href="favicon.png" />
+        <link rel="apple-touch-icon-precomposed" href="favicon.png" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    
+        <!-- Custom styles for this template -->
+        <link href="assets/css/loader.css" rel="stylesheet">
+        <link href="assets/css/loading-bar.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/gh/loadingio/transition.css@v2.0.0/dist/transition.min.css" rel="stylesheet">
+    </head>
+    <body class="w-100 h-100 d-flex align-items-center flex-column text-center">
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div class="loader-container">
+            <div class="inner loader mx-auto">
+                <div class="loader-bar"
+                    style="width:100%;height:5em"
+                    data-value="0"
+                    data-duration="0.1"
+                    data-stroke="#1a1a1a"
+                    data-stroke-width="2.71493125"
+                    data-stroke-trail="#808080"
+                    data-stroke-trail-width="2.71493125"
+                    data-path="m 7.3228341,129.85235 c 4.7058699,3.26237 9.4116999,5.88239 14.1176509,5.13167 9.4119,-1.50148 18.8234,-16.48566 28.23528,-14.11766 9.41196,2.36807 18.82364,22.08846 28.2353,14.11766 5.29461,-4.48409 10.58838,-17.73123 15.29403,-27.06816 4.70562,-9.336913 8.823095,-15.847313 12.941245,-15.284773 3.67832,0.50243 7.3561,6.64766 11.03374,14.117623 5.73366,11.64603 11.467,26.51208 17.20163,28.23531 8.98126,2.69885 17.96095,-26.8401 26.9421,-28.23531 v 0 c 0.43104,-0.0669 0.86217,-0.0694 1.2932,0 v 0 h -2e-5 c 9.41245,1.51483 18.82327,37.12327 28.2353,28.23531 4.02672,-3.80254 8.05216,-15.75067 12.07742,-28.23531 C 208.315,90.045967 213.7,72.381327 219.25218,72.191847 c 5.55217,-0.18947 11.04583,17.56207 16.53987,34.556883 3.84313,11.88813 7.68646,23.40628 11.53079,28.23529 9.41187,11.82237 18.82344,-16.45148 28.23528,-28.23531 4.70564,-5.89154 9.41176,-7.660823 14.11764,-5.30822"
+                ></div>
+            </div>
+        </div>
+
+        <div class="main-container"></div>
+
+        <script src="assets/js/loading-bar.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="https://kit.fontawesome.com/463e2fadbc.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+        <script>
+            var __pdata;
+
+            $(document).ready( function(){
+                
+                var loadingBar = new ldBar('.loader-bar', {
+                        'data-type':'stroke',
+                        'data-fill-dir':'ltr'
+                    });
+                
+                var loadMainPage = function() {
+                    return axios.request({
+                        url: 'main.html',
+                        method: 'get',
+                        timeout: 60000,
+                        onDownloadProgress: function(e) {
+                            if(e.lengthComputable){
+                                loadingBar.set((e.loaded/e.total) * 100);
+                            }
+                        }
+                    });
+                };
+
+                var loadPersonalData = function() {
+                    return axios.get('assets/file/cv_2020.json', {responseType: 'json'});
+                };
+                
+                Promise.all([loadPersonalData(),loadMainPage()]).then(function (responses) {
+                    
+                    loadingBar.set(100);
+                    __pdata = responses[0].data;
+                    $('.main-container').html(responses[1].data);
+
+                    var anim = {
+                        'animation-duration':'0.6s',
+                        'animation-delay':'1.75s'
+                    };
+                    
+                    var hide = setTimeout(() => {
+                        $('.loader-container').hide();    
+                    }, 2500);
+
+                    $('.loader-container').addClass('ld ld-fade-out').css(anim);
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+            });
+        </script>
+    </body>
+</html>
