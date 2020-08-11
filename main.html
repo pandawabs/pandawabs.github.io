@@ -61,8 +61,8 @@
                                 <div class="row">
                                     <div class="col-sm-12">
                                         <div class="progress-wrapper">
-                                            <div class="progress-item d-inline-flex justify-content-center py-2 px-3 mb-4 mx-auto" v-for="ik in info.skills.industry_knowledge">
-                                                <div class="ldBar" data-preset="circle" :data-value="ik.percentage" style="min-width:85px;min-height:85px;">
+                                            <div class="progress-item d-inline-flex justify-content-center py-2 px-3 mb-4 mx-auto" v-for="(ik, idx) in info.skills.industry_knowledge">
+                                                <div class="ldBar lb-skill" v-bind:id="'lb-skill'+idx" data-preset="circle" :data-percentage="ik.percentage" data-duration="0.5" style="min-width:85px;min-height:85px;">
                                                     <i class="fa fa-2x" v-bind:class="ik.icon" aria-hidden="true"></i>
                                                     <span>{{ ik.name }}</span>
                                                 </div>
@@ -392,6 +392,14 @@
             });
 
             $(function () {
+
+                $('.lb-skill').each(function(index) {
+                    let data = $(this).attr('data-percentage');
+                    let loadingBars = new ldBar('#lb-skill'+index);
+                    let hide = setTimeout(() => {
+                        loadingBars.set(data,true);
+                    }, 2000);
+                });
 
                 $('[data-toggle="tooltip"]').tooltip();
 
