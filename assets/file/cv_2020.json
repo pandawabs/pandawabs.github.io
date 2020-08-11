@@ -1,8 +1,8 @@
 {
   "type": "Curriculum Vitae",
-  "version": "0.5 rev0",
+  "version": "0.5 rev1",
   "created_at": 1595304109812,
-  "updated_at": 1597139466739,
+  "updated_at": 1597160782410,
   "info": {
     "name": "Pandawa Sudewa",
     "fullname": "Pandawa Bagus Sudewa",
@@ -458,7 +458,7 @@
         "image_thumbnail": "assets/img/showcase_sawalatech.jpg"
       },
       {
-        "title": "#SiniPSWFotoin",
+        "title": "Free Product Photoshoot #SiniPSWFotoin",
         "subtitle": "Photography Service",
         "project_url": "https://www.instagram.com/explore/tags/sinipswfotoin/",
         "image_thumbnail": "assets/img/showcase_elburgeritto.jpg"

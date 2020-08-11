@@ -31,12 +31,12 @@ $(document).ready( function(){
         __pdata = responses[0].data;
         $('.main-container').html(responses[1].data);
 
-        var anim = {
+        let anim = {
             'animation-duration':'0.6s',
             'animation-delay':'1.75s'
         };
         
-        var hide = setTimeout(() => {
+        let hide = setTimeout(() => {
             $('.loader-container').hide();    
         }, 2500);
 

@@ -16,6 +16,16 @@ footer {
     margin-right: 0 !important;
 }
 
+@media (min-width : 992px) {
+    .row .col-lg-6:not(:first-of-type) {
+        padding-left: 0 !important;
+    }
+
+    .row .col-lg-6:not(:last-of-type) {
+        padding-right: 0 !important;
+    }
+}
+
 .bg-dark {
     background-color: #1a1a1a !important;
 }
@@ -94,7 +104,7 @@ footer {
     box-shadow      : -10px -10px 30px rgba(0, 0, 0, 0.38);
 }
 
-@media (max-width : 576px) {
+@media (max-width : 992px) {
     .col-big-picture {
         width       : 100%;
         position    : relative;
@@ -261,7 +271,7 @@ a:hover, a:active, a:focus, a:not(:disabled):not(.disabled).active, a:not(:disab
     color: inherit;
 }
 
-@media (max-width : 576px) {
+@media (max-width : 992px) {
     .header .profile-img {
         z-index : 1;
     }
@@ -271,7 +281,7 @@ a:hover, a:active, a:focus, a:not(:disabled):not(.disabled).active, a:not(:disab
     }
 }
 
-@media (min-width: 1440px) {
+@media (max-width: 992px) {
     .header .profile-img {
         background-position: center top;
     }
@@ -279,12 +289,12 @@ a:hover, a:active, a:focus, a:not(:disabled):not(.disabled).active, a:not(:disab
 
 /* Section Wrapper */
 .section-wrapper {
-    padding : 25px 50px;
+    padding : 25px 30px;
 }
 
-@media (max-width : 480px) {
+@media (max-width : 992px) {
     .section-wrapper {
-        padding : 30px 20px;
+        padding : 10px 10px;
     }
 }
 
@@ -428,6 +438,13 @@ a:hover, a:active, a:focus, a:not(:disabled):not(.disabled).active, a:not(:disab
     background: #0000004d;
 }
 
+.carousel .carousel-item a>img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 200px;
+    object-fit: cover;
+}
+
 .carousel .carousel-item .carousel-caption {
     bottom: 15px;
     padding-bottom: 0;
@@ -436,6 +453,7 @@ a:hover, a:active, a:focus, a:not(:disabled):not(.disabled).active, a:not(:disab
 .carousel .carousel-item .carousel-caption h5 {
     color: #fff;
     margin-bottom: .0;
+    text-transform: uppercase;
 }
 
 .carousel .carousel-item .carousel-caption p {
@@ -472,6 +490,16 @@ a:hover, a:active, a:focus, a:not(:disabled):not(.disabled).active, a:not(:disab
     border-bottom-left-radius: 15px;
 }
 
+@media (max-width : 992px) {
+    .carousel .carousel-item a>img {
+        max-height: 320px;
+    }
+
+    .carousel .carousel-indicators {
+        bottom: -5%;
+    }
+}
+
 /* Accordion Card */
 
 .accordion .card {
@@ -502,6 +530,12 @@ a:hover, a:active, a:focus, a:not(:disabled):not(.disabled).active, a:not(:disab
 
 .accordion .card-body:not(:last-of-type) {
     padding-bottom: 0;
+}
+
+.accordion .content-item {
+
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
 }
 
 /* Section Intro */
