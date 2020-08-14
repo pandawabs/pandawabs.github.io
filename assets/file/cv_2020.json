@@ -1,8 +1,8 @@
 {
   "type": "Curriculum Vitae",
-  "version": "0.5 rev1",
+  "version": "0.5 rev2",
   "created_at": 1595304109812,
-  "updated_at": 1597160782410,
+  "updated_at": 1597389286624,
   "info": {
     "name": "Pandawa Sudewa",
     "fullname": "Pandawa Bagus Sudewa",
@@ -14,7 +14,7 @@
     "headline": "Software Programmer & Photographer",
     "job": { "status": "Open to Work", "detail": "Open for: Photographer, Back End Developer, Full Stack Engineer, Game Programmer" },
     "profile_picture_url": "../assets/img/profpic_2020.jpg",
-    "summary": "Experienced as Software Programmer for about 5 years and Photographer for about 2 years. I'm a result-driven person and I have high attention on every work details. I always deliver high quality work outputs with minimum faults. I can work as a team or an individual depending on the project scale. I love and eager to learn new skills, highly motivated to challenge myself to solve any problem.",
+    "summary": "Experienced as Software Programmer for about 5 years and Photographer for about 2 years. I'm a result-driven person and I have high attention on every work detail. I always deliver high-quality work outputs with minimum faults. I can work as a team or an individual depending on the project scale. I love and eager to learn new skills, highly motivated to challenge myself to solve any problem.",
     "contact": {
       "address": "Sumedang, West Java, Indonesia",
       "address_country": "Indonesia",
