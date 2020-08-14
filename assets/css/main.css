@@ -30,23 +30,26 @@ footer {
     background-color: #1a1a1a !important;
 }
 
+.color-primary {
+    color: #00afdb;
+}
+
 /* Button */
 
 .btn-primary {
+    color: #fff !important;
     background-color: #00afdb;
     border-color: #00aeda;
+}
+
+.btn-primary i {
+    color: #fff;
 }
 
 .btn-primary:hover, .btn-primary:active, .btn-primary:focus, .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
     color: #fff;
     background-color: rgb(0, 147, 184);
     border-color: #0093b8;
-}
-
-.btn.btn-pill {
-    -moz-border-radius: 30px;
-    -webkit-border-radius: 30px;
-    border-radius: 30px;
 }
 
 .btn-bootstrap {
@@ -158,11 +161,12 @@ h6 {
     line-height : 1.5em;
 }
 
-i, a {
+a, a:not(.btn) i, li>span>i {
     color: #00aeda;
 }
 
-a:hover, a:active, a:focus, a:not(:disabled):not(.disabled).active, a:not(:disabled):not(.disabled):active, .show>a.dropdown-toggle {
+a:hover, a:active, a:focus, a:not(:disabled):not(.disabled).active, a:not(:disabled):not(.disabled):active, .show>a.dropdown-toggle,
+a:not(.btn) i:hover, a:not(.btn) i:active, a:not(.btn) i:focus, a:not(.btn) i:not(:disabled):not(.disabled).active, a:not(.btn) i:not(:disabled):not(.disabled):active {
     color: #0093b8;
 }
 
@@ -304,6 +308,10 @@ a:hover, a:active, a:focus, a:not(:disabled):not(.disabled).active, a:not(:disab
     text-align      : left;
 }
 
+.section-title i {
+    color: #00aeda;
+}
+
 .section-title h2 {
     font-size: 1.75rem;
 }
@@ -338,9 +346,9 @@ a:hover, a:active, a:focus, a:not(:disabled):not(.disabled).active, a:not(:disab
 }
 
 .progress-item {
-    min-width: 145px;
-    min-height:200px;
-    text-align: center;
+    min-width   : 145px;
+    min-height  :218px;
+    text-align  : center;
 }
 
 .progress-item i {
@@ -380,6 +388,12 @@ a:hover, a:active, a:focus, a:not(:disabled):not(.disabled).active, a:not(:disab
     stroke-width: 3;
     stroke: #808080;
     stroke-linecap: round;
+}
+
+@media (max-width : 992px) {
+    .progress-item {
+        min-height: 175px;
+    }
 }
 
 /* Timeline */
@@ -519,9 +533,8 @@ a:hover, a:active, a:focus, a:not(:disabled):not(.disabled).active, a:not(:disab
     border-bottom: 1px solid rgba(0, 0, 0, 0.125);
 }
 
-.accordion .card-header button>i{
-    background-color: #e5e5e5;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+.accordion .card-header button i{
+    color: #00aeda !important;
 }
 
 .accordion .card-body:not(:first-of-type) {
@@ -538,6 +551,20 @@ a:hover, a:active, a:focus, a:not(:disabled):not(.disabled).active, a:not(:disab
     padding-right: 1rem !important;
 }
 
+/* Section Header (Print Only) */
+.section-header h1 {
+    font-size   : 48px;
+    line-height : 1.5;
+    margin      : 0;
+}
+
+.section-header h2 {
+    color: #00aeda;
+    font-size : 18px;
+    line-height: 1.5;
+    margin-bottom: 1.2rem;
+}
+
 /* Section Intro */
 
 .section-intro .section-title h2 {
@@ -549,6 +576,17 @@ a:hover, a:active, a:focus, a:not(:disabled):not(.disabled).active, a:not(:disab
 
 .section-intro p.lead {
     font-weight: normal;
+}
+
+/* Section Contact (print only) */
+.section-contact a:hover,
+.section-contact a:focus,
+.section-contact a:active {
+    color: #00aeda !important;
+}
+
+.section-contact a:active {
+    color: #0093b8 !important;
 }
 
 /* Section Licenses & Certifications */
@@ -591,4 +629,46 @@ a:hover, a:active, a:focus, a:not(:disabled):not(.disabled).active, a:not(:disab
     -moz-transform: rotate(180deg);
     -o-transform: rotate(180deg);
     transform: rotate(180deg);
+}
+
+/* PRINT */
+@media all {
+	.d-print-pagebreak	{ display: none; }
+}
+
+@media print {
+
+    body, .accordion .card, .accordion .card-header {
+        background-color: #fff !important;
+    }
+
+    .d-print-pagebreak	{
+        display: block;
+        page-break-before: always;
+    }
+
+    .row, .col-lg-6 {
+        display: block;
+    }
+
+    .collapse {
+        display: block !important;
+        height: auto !important;
+    }
+
+    .progress-wrapper {
+        padding-top: 0 !important;
+    }
+
+    .progress-item {
+        min-height:175px !important;
+    }
+}
+
+@page  
+{ 
+    size: auto;   /* auto is the initial value */ 
+
+    /* this affects the margin in the printer settings */ 
+    margin: 20mm 12.5mm 15mm 12.5mm;  
 }

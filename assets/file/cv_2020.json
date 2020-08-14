@@ -1,8 +1,8 @@
 {
   "type": "Curriculum Vitae",
-  "version": "0.5 rev2",
+  "version": "0.6 rev0",
   "created_at": 1595304109812,
-  "updated_at": 1597389286624,
+  "updated_at": 1597425709283,
   "info": {
     "name": "Pandawa Sudewa",
     "fullname": "Pandawa Bagus Sudewa",
@@ -12,8 +12,9 @@
     "gender": "Male",
     "nationality": "Indonesian",
     "headline": "Software Programmer & Photographer",
-    "job": { "status": "Open to Work", "detail": "Open for: Photographer, Back End Developer, Full Stack Engineer, Game Programmer" },
-    "profile_picture_url": "../assets/img/profpic_2020.jpg",
+    "job": { "status": "Open to Work", "detail": "Open to Work: Photographer, Back End Developer, Full Stack Engineer, Game Programmer" },
+    "profile_picture_url": "assets/img/profpic_2020.jpg",
+    "profile_picture_thumbnail_url": "assets/img/profpic_2020_thumbnail.jpg",
     "summary": "Experienced as Software Programmer for about 5 years and Photographer for about 2 years. I'm a result-driven person and I have high attention on every work detail. I always deliver high-quality work outputs with minimum faults. I can work as a team or an individual depending on the project scale. I love and eager to learn new skills, highly motivated to challenge myself to solve any problem.",
     "contact": {
       "address": "Sumedang, West Java, Indonesia",
@@ -23,12 +24,14 @@
           "type": "email",
           "icon": "fa-envelope",
           "label": "Email",
+          "label_print": "pandawa.bs@gmail.com",
           "profile_url": "mailto:pandawa.bs@gmail.com"
         },
         {
           "type": "whatsapp",
           "icon": "fa-whatsapp",
           "label": "WhatsApp",
+          "label_print": "+62857-2211-2582",
           "profile_url": "https://wa.me/6285722112582"
         }
       ],
@@ -37,30 +40,35 @@
           "type": "linkedin",
           "icon": "fa-linkedin",
           "label": "LinkedIn",
+          "label_print": "Pandawa Sudewa",
           "profile_url": "https://www.linkedin.com/in/pandawabs"
         },
         {
           "type": "instagram",
           "icon": "fa-instagram",
           "label": "Instagram",
+          "label_print": "@pandawabs",
           "profile_url": "https://instagram.com/pandawabs"
         },
         {
           "type": "facebook",
           "icon": "fa-facebook",
           "label": "Facebook",
+          "label_print": "Pandawa Bagus Sudewa",
           "profile_url": "https://facebook.com/pandawabs"
         },
         {
           "type": "twitter",
           "icon": "fa-twitter",
           "label": "Twitter",
+          "label_print": "@pandawabs",
           "profile_url": "https://twitter.com/pandawabs"
         },
         {
           "type": "github",
           "icon": "fa-github",
           "label": "GitHub",
+          "label_print": "@pandawabs",
           "profile_url": "https://github.com/pandawabs"
         }
       ]
