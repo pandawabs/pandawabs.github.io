@@ -390,7 +390,7 @@ a:not(.btn) i:hover, a:not(.btn) i:active, a:not(.btn) i:focus, a:not(.btn) i:no
     stroke-linecap: round;
 }
 
-@media (max-width : 992px) {
+@media (max-width : 1710px) {
     .progress-item {
         min-height: 175px;
     }
@@ -662,6 +662,10 @@ a:not(.btn) i:hover, a:not(.btn) i:active, a:not(.btn) i:focus, a:not(.btn) i:no
 
     .progress-item {
         min-height:175px !important;
+    }
+
+    .progress-item .ldBar-label {
+        color: #fff;
     }
 }
 

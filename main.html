@@ -1,5 +1,5 @@
 
-        <link href="assets/css/main.min.css" rel="stylesheet" integrity="sha384-lkT6LB9ZXQ4HasJTUybBotcJO6w+8/Qo9wobTyh8lMxQLp5nc8zna1Ln5a4oZ6KS">
+        <link href="assets/css/main.min.css" rel="stylesheet" integrity="sha384-dnQ2I1x35v7dxF7GBYdaKirTF8U+gC9XO5NoqqOm0nEhtW2FDc0agtH/a4fEjjXH">
         <!-- <link href="assets/css/main.css" rel="stylesheet"> -->
         <div class="main row" id="vmain">
             <div class="col-lg-4 col-big-picture d-print-none">
@@ -26,7 +26,7 @@
                         <section class="section-wrapper section-header">
                             <div class="container-fluid text-center mx-auto">
                                 <img :src="info.profile_picture_thumbnail_url" class="img-thumbnail rounded-circle" width="256" height="256">
-                                <h1>{{ info.name }}</h1>
+                                <h1>{{ info.fullname }}</h1>
                                 <h2>{{ info.headline }}</h2>
                                 <ol class="breadcrumb font-weight-bold mx-auto mt-2 mb-4 p-0 bg-transparent justify-content-center">
                                     <li class="breadcrumb-item"><span><i class="fa fa-venus-mars" aria-hidden="true"></i> {{ info.gender }}</span></li>
@@ -42,13 +42,25 @@
                 <!-- .row -->
                 <div class="row d-print-none">
                     <div class="col-lg-12">
-                        <div class="d-flex justify-content-end mt-3">
+                        <div class="d-flex justify-content-end mt-3 mx-5">
                             <ul class="list-inline">
                                 <!-- <li class="list-inline-item">
-                                    <button type="button" class="btn btn-primary rounded-circle btn-lg" onclick=""><i class="fa fa-file-download fa-fw"></i></button>
+                                    <button type="button" class="btn btn-primary rounded-circle" onclick=""><i class="fa fa-file-download fa-fw"></i></button>
                                 </li> -->
                                 <li class="list-inline-item">
-                                    <button type="button" title="Print" class="btn btn-outline-secondary rounded-circle btn-lg p-0 mx-auto" onclick="window.print()" style="width:48px; height:48px;"><span><i class="fa fa-print fa-fw"></i></span></button>
+                                    <div class="dropdown">
+                                        <button class="btn btn-primary rounded-pill dropdown-toggle text-uppercase" type="button" id="dropdown-language" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="height:48px;padding-left:16px">
+                                            {{ language }}
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdown-language">
+                                            <a class="dropdown-item" href="?lang=en">English</a>
+                                            <a class="dropdown-item" href="?lang=id">Bahasa Indonesia</a>
+                                        </div>
+                                    </div>
+                                    
+                                </li>
+                                <li class="list-inline-item">
+                                    <button type="button" title="Print" class="btn btn-outline-secondary rounded-circle p-0 mx-auto" onclick="window.print()" style="width:48px; height:48px;"><span><i class="fa fa-print fa-fw"></i></span></button>
                                 </li>
                             </ul>
                         </div>
@@ -62,7 +74,7 @@
                                 <div class="row">
                                     <div class="col-lg-12 d-print-none">
                                         <div class="section-title">
-                                            <h2>Hello!</h2>
+                                            <h2>{{ template.header.intro }}</h2>
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
@@ -88,7 +100,7 @@
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <div class="section-title">
-                                            <h2><h2><i class="fa fa-bolt" aria-hidden="true"></i> My Skills</h2>
+                                            <h2><h2><i class="fa fa-bolt" aria-hidden="true"></i> {{ template.header.skills }}</h2>
                                         </div>
                                     </div>
                                 </div>
@@ -105,7 +117,7 @@
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="content-item">
-                                            <h3>Tools & Technologies</h3>
+                                            <h3>{{ template.header.tools }}</h3>
                                             <p><button v-for="tt in info.skills.tools_technologies" type="button" class="btn btn-sm rounded-pill btn-primary mr-1 mb-1">{{ tt }}</button></p>
                                         </div>
                                     </div>
@@ -121,7 +133,7 @@
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <div class="section-title">
-                                            <h2><h2><i class="fa fa-star" aria-hidden="true"></i> Showcase</h2>
+                                            <h2><h2><i class="fa fa-star" aria-hidden="true"></i> {{ template.header.showcase }}</h2>
                                         </div>
                                     </div>
                                 </div>
@@ -163,7 +175,7 @@
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <div class="section-title">
-                                            <h2><h2><i class="fa fa-address-card" aria-hidden="true"></i> Keep in Touch</h2>
+                                            <h2><h2><i class="fa fa-address-card" aria-hidden="true"></i> {{ template.header.contact }}</h2>
                                         </div>
                                     </div>
                                 </div>
@@ -190,7 +202,7 @@
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <div class="section-title">
-                                            <h2><i class="fa fa-heart" aria-hidden="true"></i> What I Love</h2>
+                                            <h2><i class="fa fa-heart" aria-hidden="true"></i> {{ template.header.hobbies }}</h2>
                                         </div>
                                     </div>
                                 </div>
@@ -215,14 +227,14 @@
                             <div class="container-fluid">
                                 <div class="row">
                                     <div class="col-lg-12">
-                                        <div class="section-title"><h2><i class="fa fa-briefcase" aria-hidden="true"></i> Work Experience</h2></div>
+                                        <div class="section-title"><h2><i class="fa fa-briefcase" aria-hidden="true"></i> {{ template.header.experience }}</h2></div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="timeline col-lg-12">
                                         <div class="timeline-container" v-for="exp in reverseList(info.experience)">
                                             <div class="content-item ml-5">
-                                                <small>{{ dateFormat(exp.date_start,"MMM YYYY") }} - <span v-if="exp.currently_working">Present</span><span v-else>{{ dateFormat(exp.date_end,"MMM YYYY") }}</span></small>
+                                                <small>{{ dateFormat(exp.date_start,"MMM YYYY") }} - <span v-if="exp.currently_working">{{ template.date.current }}</span><span v-else>{{ dateFormat(exp.date_end,"MMM YYYY") }}</span></small>
                                                 <h3>{{ exp.title }}</h3>
                                                 <h4>{{ exp.company }}</h4>
                                                 <p>{{ exp.location }}</p>
@@ -237,7 +249,7 @@
                             <div class="container-fluid">
                                 <div class="row">
                                     <div class="col-lg-12">
-                                        <div class="section-title"><h2><i class="fa fa-graduation-cap" aria-hidden="true"></i> My Education</h2></div>
+                                        <div class="section-title"><h2><i class="fa fa-graduation-cap" aria-hidden="true"></i> {{ template.header.education }}</h2></div>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -247,7 +259,7 @@
                                                 <small>{{ dateFormat(edu.date_start,"YYYY") }} - {{ dateFormat(edu.date_end,"YYYY") }}</small>
                                                 <h3>{{ edu.school }}</h3>
                                                 <h4>{{ edu.degree }}<span v-if="edu.grade != null">, {{ edu.grade }}</span></h4>
-                                                <p class="text-muted" v-if="edu.activity_society.length > 0">Activites and Societies: <span v-for="(as, idx) in edu.activity_society" :key="">{{ as }}<span v-if="idx+1 < edu.activity_society.length">, </span></span></p>
+                                                <p class="text-muted" v-if="edu.activity_society.length > 0">{{ template.content.activities }} <span v-for="(as, idx) in edu.activity_society" :key="">{{ as }}<span v-if="idx+1 < edu.activity_society.length">, </span></span></p>
                                             </div>
                                         </div>
                                     </div>
@@ -263,7 +275,7 @@
                             <div class="container-fluid">
                                 <div class="row">
                                     <div class="col-lg-12">
-                                        <div class="section-title"><h2><i class="fa fa-scroll" aria-hidden="true"></i> Long-life Learner</h2></div>
+                                        <div class="section-title"><h2><i class="fa fa-scroll" aria-hidden="true"></i> {{ template.header.licenses }}</h2></div>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -277,8 +289,8 @@
                                             </h3>
                                             <h4>{{ licer.organization }}</h4>
                                             <p class="mb-0">
-                                                Issued {{ dateFormat(licer.date_issue,"MMM YYYY") }} &#183; <span v-if="licer.credential_expire">Expires on {{ dateFormat(licer.date_expire,"MMM YYYY") }}</span><span v-else>No Expiration</span>
-                                                <span class="text-muted" v-if="licer.credential_id != null"><br/>Credential ID {{ licer.credential_id }}</span>
+                                                {{ template.date.issued }} {{ dateFormat(licer.date_issue,"MMM YYYY") }} &#183; <span v-if="licer.credential_expire">{{ template.date.exp_on }} {{ dateFormat(licer.date_expire,"MMM YYYY") }}</span><span v-else>{{ template.date.no_exp }}</span>
+                                                <span class="text-muted" v-if="licer.credential_id != null"><br/>{{ template.content.credential }} {{ licer.credential_id }}</span>
                                             </p>
                                         </div>
                                     </div>
@@ -290,7 +302,7 @@
                             <div class="container-fluid">
                                 <div class="row">
                                     <div class="col-lg-12">
-                                        <div class="section-title"><h2><i class="fa fa-hands-helping" aria-hidden="true"></i> Contributes for Better World</h2></div>
+                                        <div class="section-title"><h2><i class="fa fa-hands-helping" aria-hidden="true"></i> {{ template.header.volunteer }}</h2></div>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -299,7 +311,7 @@
                                             <h3>{{ ve.role }}</h3>
                                             <h4>{{ ve.organization }}</h4>
                                             <p class="mb-0">
-                                                {{ dateFormat(ve.date_start,"MMM YYYY") }} - <span v-if="ve.currently_volunteering">Present</span><span v-else>{{ dateFormat(ve.date_end,"MMM YYYY") }}</span> &#183; {{ dateMonthDifference(ve.date_end, ve.date_start) }}
+                                                {{ dateFormat(ve.date_start,"MMM YYYY") }} - <span v-if="ve.currently_volunteering">{{ template.date.current }}</span><span v-else>{{ dateFormat(ve.date_end,"MMM YYYY") }}</span> &#183; {{ dateMonthDifference(ve.date_end, ve.date_start) }}
                                                 <span class="text-muted"><br/>{{ ve.cause }}</span>
                                             </p>
                                         </div>
@@ -319,7 +331,7 @@
                             <div class="container-fluid">
                                 <div class="row">
                                     <div class="col-lg-12">
-                                        <div class="section-title"><h2><i class="fa fa-medal" aria-hidden="true"></i> Accomplishments</h2></div>
+                                        <div class="section-title"><h2><i class="fa fa-medal" aria-hidden="true"></i> {{ template.header.accomplishments }}</h2></div>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -327,7 +339,7 @@
                                         <div class="card" id="languages">
                                             <div class="card-header" id="heading-languages">
                                                 <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapse-languages" aria-expanded="false" aria-controls="collapse-languages">
-                                                    <h2 class="mb-0"><span class="text-primary">{{ info.accomplishments.languages.length }}</span>&ensp;<small><strong>Languages</strong></small><span class="float-right"><i class="fa fa-chevron-down trans d-print-none" aria-hidden="true"></i></span></h2>
+                                                    <h2 class="mb-0"><span class="text-primary">{{ info.accomplishments.languages.length }}</span>&ensp;<small><strong>{{ template.header.languages }}</strong></small><span class="float-right"><i class="fa fa-chevron-down trans d-print-none" aria-hidden="true"></i></span></h2>
                                                 </button>
                                             </div>
                                             <div id="collapse-languages" class="collapse" aria-labelledby="heading-languages" data-parent="#accordion-accomplishment">
@@ -344,13 +356,13 @@
                                         <div class="card" id="organizations">
                                             <div class="card-header" id="heading-organizations">
                                                 <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapse-organizations" aria-expanded="false" aria-controls="collapse-organizations">
-                                                    <h2 class="mb-0"><span class="text-primary">{{ info.accomplishments.organizations.length }}</span>&ensp;<small><strong>Organizations</strong></small><span class="float-right"><i class="fa fa-chevron-down trans d-print-none" aria-hidden="true"></i></span></h2>
+                                                    <h2 class="mb-0"><span class="text-primary">{{ info.accomplishments.organizations.length }}</span>&ensp;<small><strong>{{ template.header.organizations }}</strong></small><span class="float-right"><i class="fa fa-chevron-down trans d-print-none" aria-hidden="true"></i></span></h2>
                                                 </button>
                                             </div>
                                             <div id="collapse-organizations" class="collapse" aria-labelledby="heading-organizations" data-parent="#accordion-accomplishment">
                                                 <div class="card-body">
                                                     <div class="content-item mt-2 mb-0" v-for="(org, idx) in reverseList(info.accomplishments.organizations)">
-                                                        <small>{{ dateFormat(org.date_start,"MMM YYYY") }} - <span v-if="org.membership_ongoing">Present</span><span v-else>{{ dateFormat(org.date_end,"MMM YYYY") }}</span></small>
+                                                        <small>{{ dateFormat(org.date_start,"MMM YYYY") }} - <span v-if="org.membership_ongoing">{{ template.date.current }}</span><span v-else>{{ dateFormat(org.date_end,"MMM YYYY") }}</span></small>
                                                         <h4>{{ org.name }}</h4>
                                                         <p class="text-muted mb-0">{{ org.position }}</p>
                                                         <hr class="d-print-none" v-if="idx+1 < info.accomplishments.organizations.length"/>
@@ -362,13 +374,13 @@
                                         <div class="card" id="projects">
                                             <div class="card-header" id="heading-projects">
                                                 <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapse-projects" aria-expanded="false" aria-controls="collapse-projects">
-                                                    <h2 class="mb-0"><span class="text-primary">{{ info.accomplishments.projects.length }}</span>&ensp;<small><strong>Projects</strong></small><span class="float-right"><i class="fa fa-chevron-down trans d-print-none" aria-hidden="true"></i></span></h2>
+                                                    <h2 class="mb-0"><span class="text-primary">{{ info.accomplishments.projects.length }}</span>&ensp;<small><strong>{{ template.header.projects }}</strong></small><span class="float-right"><i class="fa fa-chevron-down trans d-print-none" aria-hidden="true"></i></span></h2>
                                                 </button>
                                             </div>
                                             <div id="collapse-projects" class="collapse" aria-labelledby="heading-projects" data-parent="#accordion-accomplishment">
                                                 <div class="card-body">
                                                     <div class="content-item mt-2 mb-0" v-for="(prj, idx) in reverseList(info.accomplishments.projects)">
-                                                        <small>{{ dateFormat(prj.date_start,"MMM YYYY") }} - <span v-if="prj.currently_working">Present</span><span v-else>{{ dateFormat(prj.date_end,"MMM YYYY") }}</span></small>
+                                                        <small>{{ dateFormat(prj.date_start,"MMM YYYY") }} - <span v-if="prj.currently_working">{{ template.date.current }}</span><span v-else>{{ dateFormat(prj.date_end,"MMM YYYY") }}</span></small>
                                                         <h4>
                                                             <a v-if="prj.project_url != null" :href="prj.project_url" class="text-decoration-none text-default" target="_blank" title="Click to see Project">
                                                                 {{ prj.name }} <i class="fa fa-link fa-xs" aria-hidden="true"></i>
@@ -396,8 +408,8 @@
                         <footer>
                             <div class="container">
                                 <p class="text-muted">
-                                    &copy;2020 Pandawa Sudewa &#183; This site use these <a href="#" data-toggle="modal" data-target="#modal-credit">free and open-source libraries</a><br/>
-                                    <small>v{{ version }} &#183; Last update {{ dateRelative(updated_at,false) }} &#183; Powered by <a href="https://pages.github.com/" target="_blank"><i class="fa fa-github" aria-hidden="true"></i> GitHub Pages</a></small>
+                                    &copy;2020 Pandawa Sudewa &#183; {{ template.footer.this_site }} <a href="#" data-toggle="modal" data-target="#modal-credit">{{ template.footer.open_source }}</a><br/>
+                                    <small>v{{ version }} &#183; {{ template.footer.last_update }} {{ dateRelative(updated_at,false) }} &#183; {{ template.footer.powered_by }} <a href="https://pages.github.com/" target="_blank"><i class="fa fa-github" aria-hidden="true"></i> GitHub Pages</a></small>
                                 </p>
                             </div>
                             <div class="modal fade d-print-none" id="modal-credit" data-keyboard="false" tabindex="-1" aria-labelledby="label-credit" aria-hidden="true">
@@ -454,7 +466,10 @@
                         let b = (date2 != ""?moment(date2):moment());
                         let c = a.diff(b, 'months');
 
-                        return (c > 1? (c+" mos"):(c+" mo"));
+                        if(moment.locale() == 'id')
+                            return (c+" bulan");
+                        else
+                            return (c > 1? (c+" months"):(c+" month"));
                     }
                 }
             });

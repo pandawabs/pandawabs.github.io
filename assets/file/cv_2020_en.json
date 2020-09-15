@@ -1,8 +1,8 @@
 {
   "type": "Curriculum Vitae",
-  "version": "0.6 rev0",
+  "version": "0.7 rev0",
   "created_at": 1595304109812,
-  "updated_at": 1597425709283,
+  "updated_at": 1600155653032,
   "info": {
     "name": "Pandawa Sudewa",
     "fullname": "Pandawa Bagus Sudewa",
@@ -12,7 +12,7 @@
     "gender": "Male",
     "nationality": "Indonesian",
     "headline": "Software Programmer & Photographer",
-    "job": { "status": "Open to Work", "detail": "Open to Work: Photographer, Back End Developer, Full Stack Engineer, Game Programmer" },
+    "job": { "status": "Open to Work", "detail": "Open to Work: Photographer, Back-End Web Developer, Full-Stack Web Developer, Game Programmer" },
     "profile_picture_url": "assets/img/profpic_2020.jpg",
     "profile_picture_thumbnail_url": "assets/img/profpic_2020_thumbnail.jpg",
     "summary": "Experienced as Software Programmer for about 5 years and Photographer for about 2 years. I'm a result-driven person and I have high attention on every work detail. I always deliver high-quality work outputs with minimum faults. I can work as a team or an individual depending on the project scale. I love and eager to learn new skills, highly motivated to challenge myself to solve any problem.",
@@ -473,5 +473,39 @@
       }
     ]
   },
-  "language": "en-US"
+  "language": "en",
+  "template": {
+    "header": {
+      "intro": "Hello!",
+      "skills": "My Specialities",
+      "tools": "Tools & Technologies",
+      "showcase": "Showcase",
+      "contact": "Contact",
+      "hobbies": "Hobbies & Interests",
+      "experience": "Work Experience",
+      "education": "Education",
+      "licenses": "Long-life Learner",
+      "volunteer": "Contribute to The World",
+      "accomplishments": "Accomplishments",
+      "languages": "Languages",
+      "organizations": "Organizations",
+      "projects": "Projects"
+    },
+    "content": {
+      "activities": "Activities dan Societies:",
+      "credential": "Credential ID"
+    },
+    "date": {
+      "current": "Present",
+      "issued": "Issued",
+      "exp_on": "Expires on",
+      "no_exp": "No Expiration"
+    },
+    "footer": {
+      "this_site": "This site using these",
+      "open_source": "free and open-source libraries",
+      "last_update": "Last update ",
+      "powered_by": "Powered by"
+    }
+}
 }
