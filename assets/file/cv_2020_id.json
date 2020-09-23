@@ -1,8 +1,8 @@
 {
     "type": "Curriculum Vitae",
-    "version": "0.7 rev0",
+    "version": "0.7 rev1",
     "created_at": 1595304109812,
-    "updated_at": 1600155653032,
+    "updated_at": 1600836001427,
     "info": {
         "name": "Pandawa Sudewa",
         "fullname": "Pandawa Bagus Sudewa",
@@ -128,6 +128,15 @@
                 "date_end": "2015-10"
             },
             {
+                "title": "Freelance Photographer",
+                "employment_type": "Freelance",
+                "company": "",
+                "location": "Bandung, Jawa Barat, Indonesia",
+                "currently_working": false,
+                "date_start": "2015-11",
+                "date_end": "2016-04"
+            },
+            {
                 "title": "Software Programmer",
                 "employment_type": "Full-time",
                 "company": "The WALi Studio",
@@ -146,9 +155,9 @@
                 "date_end": ""
             },
             {
-                "title": "Freelance Software Programmer",
+                "title": "Freelance Software Developer",
                 "employment_type": "Freelance",
-                "company": "Wiraswasta",
+                "company": "",
                 "location": "Sumedang, Jawa Barat, Indonesia",
                 "currently_working": true,
                 "date_start": "2019-10",
@@ -294,21 +303,28 @@
             "organizations": [
                 {
                     "name": "Camera Indonesia Regional Jawa Barat",
-                    "position": "Anggota",
+                    "position": "Anggota Aktif",
                     "membership_ongoing": false,
                     "date_start": "2015",
                     "date_end": "2018"
                 },
                 {
                     "name": "Himpunan Mahasiswa Komputer Politeknik Negeri Bandung",
-                    "position": "Anggota",
+                    "position": "Ketua Departemen Seni & Budaya",
+                    "membership_ongoing": false,
+                    "date_start": "2011",
+                    "date_end": "2012"
+                },
+                {
+                    "name": "Himpunan Mahasiswa Komputer Politeknik Negeri Bandung",
+                    "position": "Anggota Aktif",
                     "membership_ongoing": false,
                     "date_start": "2010-10",
                     "date_end": "2013-09"
                 },
                 {
                     "name": "Forum Fotografer Sumedang",
-                    "position": "Anggota",
+                    "position": "Anggota Aktif",
                     "membership_ongoing": true,
                     "date_start": "2018",
                     "date_end": ""
