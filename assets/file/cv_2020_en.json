@@ -1,8 +1,8 @@
 {
     "type": "Curriculum Vitae",
-    "version": "0.7 rev1",
+    "version": "0.7 rev2",
     "created_at": 1595304109812,
-    "updated_at": 1600836001427,
+    "updated_at": 1602474830939,
     "info": {
         "name": "Pandawa Sudewa",
         "fullname": "Pandawa Bagus Sudewa",
@@ -26,13 +26,6 @@
                     "label": "Email",
                     "label_print": "pandawa.bs@gmail.com",
                     "profile_url": "mailto:pandawa.bs@gmail.com"
-                },
-                {
-                    "type": "whatsapp",
-                    "icon": "fa-whatsapp",
-                    "label": "WhatsApp",
-                    "label_print": "+62857-2211-2582",
-                    "profile_url": "https://wa.me/6285722112582"
                 }
             ],
             "social_profile": [
@@ -47,8 +40,8 @@
                     "type": "instagram",
                     "icon": "fa-instagram",
                     "label": "Instagram",
-                    "label_print": "@pandawabs",
-                    "profile_url": "https://instagram.com/pandawabs"
+                    "label_print": "@pandawasudewa",
+                    "profile_url": "https://instagram.com/pandawasudewa"
                 },
                 {
                     "type": "facebook",
@@ -56,13 +49,6 @@
                     "label": "Facebook",
                     "label_print": "Pandawa Bagus Sudewa",
                     "profile_url": "https://facebook.com/pandawabs"
-                },
-                {
-                    "type": "twitter",
-                    "icon": "fa-twitter",
-                    "label": "Twitter",
-                    "label_print": "@pandawabs",
-                    "profile_url": "https://twitter.com/pandawabs"
                 },
                 {
                     "type": "github",
