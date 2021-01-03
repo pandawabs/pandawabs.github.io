@@ -1,8 +1,8 @@
 {
     "type": "Curriculum Vitae",
-    "version": "0.7 rev2",
+    "version": "0.7 rev3",
     "created_at": 1595304109812,
-    "updated_at": 1602474830939,
+    "updated_at": 1609678753346,
     "info": {
         "name": "Pandawa Sudewa",
         "fullname": "Pandawa Bagus Sudewa",
@@ -12,7 +12,7 @@
         "gender": "Pria",
         "nationality": "Indonesia",
         "headline": "Pengembang Perangkat Lunak & Fotografer",
-        "job": { "status": "Terbuka untuk Bekerja", "detail": "Terbuka untuk Bekerja: Fotografer, Back-End Web Developer, Full-Stack Web Developer, Game Programmer" },
+        "job": { "status": "Bekerja", "detail": "Bekerja sebagai Full Stack Developer" },
         "profile_picture_url": "assets/img/profpic_2020.jpg",
         "profile_picture_thumbnail_url": "assets/img/profpic_2020_thumbnail.jpg",
         "summary": "Berpengalaman sebagai Pengembang Perangkat Lunak selama 5 tahun dan Fotografer selama 2 tahun. Saya adalah seorang yang berorientasi pada hasil dan mempunyai perhatian lebih pada setiap detil pekerjaan. Saya selalu memberikan hasil pekerjaan yang berkualitas tinggi dengan tingkat kesalahan yang sangat rendah. Saya bisa bekerja dalam tim maupun individu tergantung skala pekerjaan. Saya senang dan selalu ingin belajar hal baru, sangat termotivasi untuk menantang diri saya sendiri untuk menyelesaikan setiap masalah.",
@@ -40,8 +40,8 @@
                     "type": "instagram",
                     "icon": "fa-instagram",
                     "label": "Instagram",
-                    "label_print": "@pandawasudewa",
-                    "profile_url": "https://instagram.com/pandawasudewa"
+                    "label_print": "@pandawabs",
+                    "profile_url": "https://instagram.com/pandawabs"
                 },
                 {
                     "type": "facebook",
@@ -138,7 +138,7 @@
                 "location": "Sumedang, Jawa Barat, Indonesia",
                 "currently_working": true,
                 "date_start": "2018-03",
-                "date_end": ""
+                "date_end": "2020-11"
             },
             {
                 "title": "Freelance Software Developer",
@@ -147,6 +147,15 @@
                 "location": "Sumedang, Jawa Barat, Indonesia",
                 "currently_working": true,
                 "date_start": "2019-10",
+                "date_end": "2020-11"
+            },
+            {
+                "title": "Full Stack Developer",
+                "employment_type": "Contract",
+                "company": "Niagahoster",
+                "location": "Yogyakarta, Indonesia",
+                "currently_working": true,
+                "date_start": "2020-11",
                 "date_end": ""
             }
         ],
@@ -213,6 +222,15 @@
                 "date_expire": null,
                 "credential_id": null,
                 "credential_url": "http://www.linkedin.com/learning/artist-at-work-complementary-colors"
+            },
+            {
+                "name": "HackerRank Certificate: Problem Solving (Basic)",
+                "organization": "HackerRank",
+                "credential_expire": false,
+                "date_issue": "2020-11",
+                "date_expire": null,
+                "credential_id": "420183C72F20",
+                "credential_url": "https://www.hackerrank.com/certificates/420183c72f20"
             }
         ],
         "volunteer_experience": [
@@ -230,7 +248,7 @@
                 "cause": "Bantuan Bencana dan Kemanusiaan",
                 "currently_volunteering": true,
                 "date_start": "2020-04",
-                "date_end": ""
+                "date_end": "2020-10"
             }
         ],
         "skills": {

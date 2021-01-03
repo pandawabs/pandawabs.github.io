@@ -1,8 +1,8 @@
 {
     "type": "Curriculum Vitae",
-    "version": "0.7 rev2",
+    "version": "0.7 rev3",
     "created_at": 1595304109812,
-    "updated_at": 1602474830939,
+    "updated_at": 1609678753346,
     "info": {
         "name": "Pandawa Sudewa",
         "fullname": "Pandawa Bagus Sudewa",
@@ -12,7 +12,7 @@
         "gender": "Male",
         "nationality": "Indonesian",
         "headline": "Software Programmer & Photographer",
-        "job": { "status": "Open to Work", "detail": "Open to Work: Photographer, Back-End Web Developer, Full-Stack Web Developer, Game Programmer" },
+        "job": { "status": "Full-time Work", "detail": "Full-time Work as Full Stack Developer" },
         "profile_picture_url": "assets/img/profpic_2020.jpg",
         "profile_picture_thumbnail_url": "assets/img/profpic_2020_thumbnail.jpg",
         "summary": "Experienced as Software Programmer for about 5 years and Photographer for about 2 years. I'm a result-driven person and I have high attention on every work detail. I always deliver high-quality work outputs with minimum faults. I can work as a team or an individual depending on the project scale. I love and eager to learn new skills, highly motivated to challenge myself to solve any problem.",
@@ -40,8 +40,8 @@
                     "type": "instagram",
                     "icon": "fa-instagram",
                     "label": "Instagram",
-                    "label_print": "@pandawasudewa",
-                    "profile_url": "https://instagram.com/pandawasudewa"
+                    "label_print": "@pandawabs",
+                    "profile_url": "https://instagram.com/pandawabs"
                 },
                 {
                     "type": "facebook",
@@ -148,6 +148,15 @@
                 "currently_working": true,
                 "date_start": "2019-10",
                 "date_end": ""
+            },
+            {
+                "title": "Full Stack Developer",
+                "employment_type": "Contract",
+                "company": "Niagahoster",
+                "location": "Yogyakarta, Indonesia",
+                "currently_working": true,
+                "date_start": "2020-11",
+                "date_end": ""
             }
         ],
         "licenses_certifications": [
@@ -213,6 +222,15 @@
                 "date_expire": null,
                 "credential_id": null,
                 "credential_url": "http://www.linkedin.com/learning/artist-at-work-complementary-colors"
+            },
+            {
+                "name": "HackerRank Certificate: Problem Solving (Basic)",
+                "organization": "HackerRank",
+                "credential_expire": false,
+                "date_issue": "2020-11",
+                "date_expire": null,
+                "credential_id": "420183C72F20",
+                "credential_url": "https://www.hackerrank.com/certificates/420183c72f20"
             }
         ],
         "volunteer_experience": [
@@ -230,7 +248,7 @@
                 "cause": "Disaster and Humanitarian Relief",
                 "currently_volunteering": true,
                 "date_start": "2020-04",
-                "date_end": ""
+                "date_end": "2020-10"
             }
         ],
         "skills": {
