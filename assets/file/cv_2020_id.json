@@ -136,7 +136,7 @@
                 "employment_type": "Wiraswasta",
                 "company": "Pandawa Sudewa Works",
                 "location": "Sumedang, Jawa Barat, Indonesia",
-                "currently_working": true,
+                "currently_working": false,
                 "date_start": "2018-03",
                 "date_end": "2020-11"
             },
@@ -145,7 +145,7 @@
                 "employment_type": "Freelance",
                 "company": "",
                 "location": "Sumedang, Jawa Barat, Indonesia",
-                "currently_working": true,
+                "currently_working": false,
                 "date_start": "2019-10",
                 "date_end": "2020-11"
             },

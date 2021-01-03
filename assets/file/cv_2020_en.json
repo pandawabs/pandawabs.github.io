@@ -136,18 +136,18 @@
                 "employment_type": "Self-employed",
                 "company": "Pandawa Sudewa Works",
                 "location": "Sumedang, West Java, Indonesia",
-                "currently_working": true,
+                "currently_working": false,
                 "date_start": "2018-03",
-                "date_end": ""
+                "date_end": "2020-11"
             },
             {
                 "title": "Freelance Software Developer",
                 "employment_type": "Freelance",
                 "company": "",
                 "location": "Sumedang, West Java, Indonesia",
-                "currently_working": true,
+                "currently_working": false,
                 "date_start": "2019-10",
-                "date_end": ""
+                "date_end": "2020-11"
             },
             {
                 "title": "Full Stack Developer",
