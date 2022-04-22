@@ -1,8 +1,8 @@
 {
     "type": "Curriculum Vitae",
-    "version": "0.7 rev3",
+    "version": "0.7 rev4",
     "created_at": 1595304109812,
-    "updated_at": 1609678753346,
+    "updated_at": 1650641689483,
     "info": {
         "name": "Pandawa Sudewa",
         "fullname": "Pandawa Bagus Sudewa",
@@ -13,9 +13,9 @@
         "nationality": "Indonesia",
         "headline": "Pengembang Perangkat Lunak & Fotografer",
         "job": { "status": "Bekerja", "detail": "Bekerja sebagai Full Stack Developer" },
-        "profile_picture_url": "assets/img/profpic_2020.jpg",
-        "profile_picture_thumbnail_url": "assets/img/profpic_2020_thumbnail.jpg",
-        "summary": "Berpengalaman sebagai Pengembang Perangkat Lunak selama 5 tahun dan Fotografer selama 2 tahun. Saya adalah seorang yang berorientasi pada hasil dan mempunyai perhatian lebih pada setiap detil pekerjaan. Saya selalu memberikan hasil pekerjaan yang berkualitas tinggi dengan tingkat kesalahan yang sangat rendah. Saya bisa bekerja dalam tim maupun individu tergantung skala pekerjaan. Saya senang dan selalu ingin belajar hal baru, sangat termotivasi untuk menantang diri saya sendiri untuk menyelesaikan setiap masalah.",
+        "profile_picture_url": "assets/img/profpic_2020.webp",
+        "profile_picture_thumbnail_url": "assets/img/profpic_2020_thumbnail.webp",
+        "summary": "Berpengalaman sebagai Pengembang Perangkat Lunak selama 6 tahun dan Fotografer selama 3 tahun. Saya adalah seorang yang berorientasi pada hasil dan mempunyai perhatian lebih pada setiap detil pekerjaan. Saya selalu memberikan hasil pekerjaan yang berkualitas tinggi dengan tingkat kesalahan yang sangat rendah. Saya bisa bekerja dalam tim maupun individu tergantung skala pekerjaan. Saya senang dan selalu ingin belajar hal baru, sangat termotivasi untuk menantang diri saya sendiri untuk menyelesaikan setiap masalah.",
         "contact": {
             "address": "Sumedang, Jawa Barat, Indonesia",
             "address_country": "Indonesia",
@@ -465,31 +465,31 @@
                 "title": "Income Treats - Huat Huat Chinese New Year Game",
                 "subtitle": "Web Game",
                 "project_url": "https://www.gamelokalindonesia.com/projects/incometreats/game/",
-                "image_thumbnail": "assets/img/showcase_incometreats.jpg"
+                "image_thumbnail": "assets/img/showcase_incometreats.webp"
             },
             {
                 "title": "Hijab DressUp",
                 "subtitle": "Mobile Game",
                 "project_url": "https://play.google.com/store/apps/details?id=com.tws.games.hijabdressup",
-                "image_thumbnail": "assets/img/showcase_hijabdressup.jpg"
+                "image_thumbnail": "assets/img/showcase_hijabdressup.webp"
             },
             {
                 "title": "Salman & Sofia AR+ Cards Sholat & Wudhu",
                 "subtitle": "Mobile Application",
                 "project_url": "https://salmanandsofia.com/kartuarplus/",
-                "image_thumbnail": "assets/img/showcase_salsoar.jpg"
+                "image_thumbnail": "assets/img/showcase_salsoar.webp"
             },
             {
                 "title": "SAWALA Technology",
                 "subtitle": "Website",
                 "project_url": "https://sawala.tech",
-                "image_thumbnail": "assets/img/showcase_sawalatech.jpg"
+                "image_thumbnail": "assets/img/showcase_sawalatech.webp"
             },
             {
                 "title": "Free Product Photoshoot #SiniPSWFotoin",
                 "subtitle": "Photography Service",
                 "project_url": "https://www.instagram.com/explore/tags/sinipswfotoin/",
-                "image_thumbnail": "assets/img/showcase_elburgeritto.jpg"
+                "image_thumbnail": "assets/img/showcase_elburgeritto.webp"
             }
         ]
     },

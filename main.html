@@ -1,12 +1,11 @@
 
-        <link href="assets/css/main.min.css" rel="stylesheet" integrity="sha384-dnQ2I1x35v7dxF7GBYdaKirTF8U+gC9XO5NoqqOm0nEhtW2FDc0agtH/a4fEjjXH">
+        <link href="assets/css/main.min.css" rel="stylesheet" integrity="sha384-sqzG9RsIb50ZO1Us9Fma1YrGQepc07p6gw4gcQLIJTda9DxZcXsNDq5mYp8e4HJo">
         <!-- <link href="assets/css/main.css" rel="stylesheet"> -->
         <div class="main row" id="vmain">
             <div class="col-lg-4 col-big-picture d-print-none">
                 <header class="header">
                     <div class="content text-center">
-                        <h1>{{ info.name }}</h1>
-                        <h2>{{ info.headline }}</h2>
+                        <h1 class="mb-4">{{ info.fullname }}</h1>
                         <ul class="social-icon">
                             <li v-for="msg in info.contact.messenger">
                                 <a :href="msg.profile_url" target="_blank" data-toggle='tooltip' :title="msg.label"><i class="fa" v-bind:class="msg.icon" aria-hidden="true"></i></a>
@@ -27,7 +26,6 @@
                             <div class="container-fluid text-center mx-auto">
                                 <img :src="info.profile_picture_thumbnail_url" class="img-thumbnail rounded-circle" width="256" height="256">
                                 <h1>{{ info.fullname }}</h1>
-                                <h2>{{ info.headline }}</h2>
                                 <ol class="breadcrumb font-weight-bold mx-auto mt-2 mb-4 p-0 bg-transparent justify-content-center">
                                     <li class="breadcrumb-item"><span><i class="fa fa-venus-mars" aria-hidden="true"></i> {{ info.gender }}</span></li>
                                     <li class="breadcrumb-item"><span><i class="fa fa-birthday-cake" aria-hidden="true"></i> {{ dateFormat(info.birth_date,'MMM Do YYYY') }}</span></li>
@@ -53,8 +51,8 @@
                                             {{ language }}
                                         </button>
                                         <div class="dropdown-menu" aria-labelledby="dropdown-language">
-                                            <a class="dropdown-item" href="?lang=en">English</a>
-                                            <a class="dropdown-item" href="?lang=id">Bahasa Indonesia</a>
+                                            <a class="dropdown-item" v-on:click="changeLanguage('en')">English</a>
+                                            <a class="dropdown-item" v-on:click="changeLanguage('id')">Bahasa Indonesia</a>
                                         </div>
                                     </div>
                                     
@@ -408,7 +406,7 @@
                         <footer>
                             <div class="container">
                                 <p class="text-muted">
-                                    &copy;2020 Pandawa Sudewa &#183; {{ template.footer.this_site }} <a href="#" data-toggle="modal" data-target="#modal-credit">{{ template.footer.open_source }}</a><br/>
+                                    &copy;{{ dateYearNow }} Pandawa Sudewa &#183; {{ template.footer.this_site }} <a href="#" data-toggle="modal" data-target="#modal-credit">{{ template.footer.open_source }}</a><br/>
                                     <small>v{{ version }} &#183; {{ template.footer.last_update }} {{ dateRelative(updated_at,false) }} &#183; {{ template.footer.powered_by }} <a href="https://pages.github.com/" target="_blank"><i class="fa fa-github" aria-hidden="true"></i> GitHub Pages</a></small>
                                 </p>
                             </div>
@@ -447,38 +445,52 @@
             </div>
         </div>
         <script>
-            var vapp = new Vue({
-                el: '#vmain',
-                data: __pdata,
-                methods: {
-                    reverseList: function (array) {
-                        return array.slice().reverse();
-                    },
-                    dateFormat: function (date, stringFormat) {
-                        return moment(date).format(stringFormat);
-                    },
-                    dateRelative: function (date, withoutSuffix) {
-                        return moment(date).fromNow(withoutSuffix);
-                    },
-                    dateMonthDifference: function (date1, date2) {
-                        
-                        let a = (date1 != ""?moment(date1):moment());
-                        let b = (date2 != ""?moment(date2):moment());
-                        let c = a.diff(b, 'months');
-
-                        if(moment.locale() == 'id')
-                            return (c+" bulan");
-                        else
-                            return (c > 1? (c+" months"):(c+" month"));
-                    }
-                }
-            });
-
             $(function () {
+                var vapp = new Vue({
+                    el: '#vmain',
+                    data: () => {return __pdata},
+                    computed: {
+                        dateYearNow() {
+                            return new Date().getFullYear();
+                        }
+                    },
+                    methods: {
+                        reverseList: function (array) {
+                            return array.slice().reverse();
+                        },
+                        dateFormat: function (date, stringFormat) {
+                            return moment(date).format(stringFormat);
+                        },
+                        dateRelative: function (date, withoutSuffix) {
+                            return moment(date).fromNow(withoutSuffix);
+                        },
+                        dateMonthDifference: function (date1, date2) {
+                            let a = (date1 != "" ? moment(date1) : moment());
+                            let b = (date2 != "" ? moment(date2) : moment());
+                            let c = a.diff(b, 'months');
+
+                            if (moment.locale() == 'id') {
+                                return (`${c} bulan`);
+                            } else {
+                                return `${c} month` + (c > 1 ? 's' : '');
+                            }
+                        },
+                        changeLanguage: function (langId) {
+                            let thisData = this;
+                            axios.get(
+                                    `assets/file/cv_${langId}.min.json`,
+                                    {responseType: 'json'}
+                                )
+                                .then((response) => {
+                                    Object.entries(response.data).forEach(([key, value]) => thisData[key] = value);
+                                });
+                        }
+                    }
+                });
 
                 $('.lb-skill').each(function(index) {
                     let data = $(this).attr('data-percentage');
-                    let loadingBars = new ldBar('#lb-skill'+index);
+                    let loadingBars = new ldBar(`#lb-skill${index}`);
                     let hide = setTimeout(() => {
                         loadingBars.set(data,true);
                     }, 2000);
@@ -487,9 +499,7 @@
                 $('[data-toggle="tooltip"]').tooltip();
 
                 $('button[data-toggle="collapse"]').on('click', function () {
-                    
-                    if($(this).attr('aria-expanded') === "false"){
-                        
+                    if ($(this).attr('aria-expanded') === "false") {
                         $(this).find('.trans').toggleClass("trans-rt180");
                     }
                 });
@@ -497,7 +507,7 @@
                 $('.accordion').on('shown.bs.collapse', function (e) {
                     location.href = '#'+$(e.target).parent().attr('id');
                 });
-                
+
                 $('.accordion').on('hide.bs.collapse', function (e) {
                     $(e.target).siblings().find('.trans').toggleClass("trans-rt180");
                 });
