@@ -8,10 +8,10 @@
                         <h1 class="mb-4">{{ info.fullname }}</h1>
                         <ul class="social-icon">
                             <li v-for="msg in info.contact.messenger">
-                                <a :href="msg.profile_url" target="_blank" data-toggle='tooltip' :title="msg.label"><i class="fa" v-bind:class="msg.icon" aria-hidden="true"></i></a>
+                                <a :href="msg.profile_url" target="_blank" rel="external nofollow" data-toggle='tooltip' :title="msg.label"><i class="fa" v-bind:class="msg.icon" aria-hidden="true"></i></a>
                             </li>
                             <li v-for="sp in info.contact.social_profile">
-                                <a :href="sp.profile_url" target="_blank" data-toggle='tooltip' :title="sp.label"><i class="fa" v-bind:class="sp.icon" aria-hidden="true"></i></a>
+                                <a :href="sp.profile_url" target="_blank" rel="external nofollow" data-toggle='tooltip' :title="sp.label"><i class="fa" v-bind:class="sp.icon" aria-hidden="true"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -140,7 +140,7 @@
                                         <div id="carousel-showcase" class="carousel slide" data-ride="carousel">
                                             <div class="carousel-inner">
                                                 <div v-for="(sc, idx) in reverseList(info.showcase)" class="carousel-item" v-bind:class="idx == 0? 'active':''">
-                                                    <a :href="sc.project_url" target="_blank">
+                                                    <a :href="sc.project_url" target="_blank" rel="external nofollow">
                                                         <img class="d-block" :src="sc.image_thumbnail"/>
                                                         <div class="carousel-overlay">
                                                             <div class="carousel-caption d-sm-block">
@@ -280,7 +280,7 @@
                                     <div class="col-lg-12">
                                         <div class="content-item mb-4" v-for="licer in reverseList(info.licenses_certifications)">
                                             <h3>
-                                                <a v-if="licer.credential_url != null" :href="licer.credential_url" class="text-decoration-none text-default" target="_blank" title="Click to see Credential">
+                                                <a v-if="licer.credential_url != null" :href="licer.credential_url" class="text-decoration-none text-default" target="_blank" rel="external nofollow" title="Click to see Credential">
                                                     {{ licer.name }} <i class="fa fa-link fa-xs" aria-hidden="true"></i>
                                                 </a>
                                                 <span v-else>{{ licer.name }}</span>
@@ -380,7 +380,7 @@
                                                     <div class="content-item mt-2 mb-0" v-for="(prj, idx) in reverseList(info.accomplishments.projects)">
                                                         <small>{{ dateFormat(prj.date_start,"MMM YYYY") }} - <span v-if="prj.currently_working">{{ template.date.current }}</span><span v-else>{{ dateFormat(prj.date_end,"MMM YYYY") }}</span></small>
                                                         <h4>
-                                                            <a v-if="prj.project_url != null" :href="prj.project_url" class="text-decoration-none text-default" target="_blank" title="Click to see Project">
+                                                            <a v-if="prj.project_url != null" :href="prj.project_url" class="text-decoration-none text-default" target="_blank" rel="external nofollow" title="Click to see Project">
                                                                 {{ prj.name }} <i class="fa fa-link fa-xs" aria-hidden="true"></i>
                                                             </a>
                                                             <span v-else>{{ prj.name }}</span>
@@ -407,7 +407,7 @@
                             <div class="container">
                                 <p class="text-muted">
                                     &copy;{{ dateYearNow }} Pandawa Sudewa &#183; {{ template.footer.this_site }} <a href="#" data-toggle="modal" data-target="#modal-credit">{{ template.footer.open_source }}</a><br/>
-                                    <small>v{{ version }} &#183; {{ template.footer.last_update }} {{ dateRelative(updated_at,false) }} &#183; {{ template.footer.powered_by }} <a href="https://pages.github.com/" target="_blank"><i class="fa fa-github" aria-hidden="true"></i> GitHub Pages</a></small>
+                                    <small>v{{ version }} &#183; {{ template.footer.last_update }} {{ dateRelative(updated_at,false) }} &#183; {{ template.footer.powered_by }} <a href="https://pages.github.com/" target="_blank" rel="external nofollow"><i class="fa fa-github" aria-hidden="true"></i> GitHub Pages</a></small>
                                 </p>
                             </div>
                             <div class="modal fade d-print-none" id="modal-credit" data-keyboard="false" tabindex="-1" aria-labelledby="label-credit" aria-hidden="true">
@@ -422,15 +422,15 @@
                                         <div class="modal-body">
                                             <div class="container text-center">                                     
                                                 <div class="btn-group-vertical btn-block">
-                                                    <a class="btn btn-bootstrap btn-lg" href="https://getbootstrap.com/" target="_blank"><i class="fab fa-bootstrap text-default" aria-hidden="true"></i> Bootstrap</a>
-                                                    <a class="btn btn-vuejs btn-lg" href="https://vuejs.org/" target="_blank"><i class="fab fa-vuejs text-default" aria-hidden="true"></i> Vue.js</a>
-                                                    <a class="btn btn-fontawesome btn-lg" href="https://fontawesome.com/" target="_blank"><i class="fa fa-font-awesome text-default" aria-hidden="true"></i> Font Awesome</a>
-                                                    <a class="btn btn-primary" href="https://jquery.com/" target="_blank">jQuery</a>
-                                                    <a class="btn btn-primary" href="https://github.com/axios/axios" target="_blank">Axios</a>
-                                                    <a class="btn btn-primary" href="https://momentjs.com/" target="_blank">Moment.js</a>
-                                                    <a class="btn btn-primary" href="https://popper.js.org/" target="_blank">Popper.js</a>
-                                                    <a class="btn btn-primary" href="https://loading.io/progress/" target="_blank">LoadingBar.js</a>
-                                                    <a class="btn btn-primary" href="https://loading.io/transition/" target="_blank">Transition.css</a>
+                                                    <a class="btn btn-bootstrap btn-lg" href="https://getbootstrap.com/" target="_blank" rel="external nofollow"><i class="fab fa-bootstrap text-default" aria-hidden="true"></i> Bootstrap</a>
+                                                    <a class="btn btn-vuejs btn-lg" href="https://vuejs.org/" target="_blank" rel="external nofollow"><i class="fab fa-vuejs text-default" aria-hidden="true"></i> Vue.js</a>
+                                                    <a class="btn btn-fontawesome btn-lg" href="https://fontawesome.com/" target="_blank" rel="external nofollow"><i class="fa fa-font-awesome text-default" aria-hidden="true"></i> Font Awesome</a>
+                                                    <a class="btn btn-primary" href="https://jquery.com/" target="_blank" rel="external nofollow">jQuery</a>
+                                                    <a class="btn btn-primary" href="https://github.com/axios/axios" target="_blank" rel="external nofollow">Axios</a>
+                                                    <a class="btn btn-primary" href="https://momentjs.com/" target="_blank" rel="external nofollow">Moment.js</a>
+                                                    <a class="btn btn-primary" href="https://popper.js.org/" target="_blank" rel="external nofollow">Popper.js</a>
+                                                    <a class="btn btn-primary" href="https://loading.io/progress/" target="_blank" rel="external nofollow">LoadingBar.js</a>
+                                                    <a class="btn btn-primary" href="https://loading.io/transition/" target="_blank" rel="external nofollow">Transition.css</a>
                                                 </div>
                                             </div>
                                         </div>
