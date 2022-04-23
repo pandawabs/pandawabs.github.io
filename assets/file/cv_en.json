@@ -12,7 +12,10 @@
         "gender": "Male",
         "nationality": "Indonesian",
         "headline": "Software Programmer & Photographer",
-        "job": { "status": "Full-time Work", "detail": "Full-time Work as Full Stack Developer" },
+        "job": {
+            "status": "Full-time Work",
+            "detail": "Full-time Work as Full Stack Developer"
+        },
         "profile_picture_url": "assets/img/profpic_2020.webp",
         "profile_picture_thumbnail_url": "assets/img/profpic_2020_thumbnail.webp",
         "summary": "Experienced as Software Programmer for about 6 years and Photographer for about 3 years. I'm a result-driven person and I have high attention to every work detail. I always deliver high-quality work outputs with minimum faults. I can work as a team or as an individual depending on the project scale. I love and am eager to learn new skills, and highly motivated to challenge myself to solve any problem.",
@@ -231,6 +234,15 @@
                 "date_expire": null,
                 "credential_id": "420183C72F20",
                 "credential_url": "https://www.hackerrank.com/certificates/420183c72f20"
+            },
+            {
+                "name": "Workshop REST API with Golang",
+                "organization": "Alterra Academy",
+                "credential_expire": false,
+                "date_issue": "2021-11",
+                "date_expire": null,
+                "credential_id": "024/SER/RAG/XI/2021",
+                "credential_url": null
             }
         ],
         "volunteer_experience": [
@@ -254,19 +266,19 @@
         "skills": {
             "industry_knowledge": [
                 {
-                "name": "Web Development",
-                "percentage": 70.0,
-                "icon": "fa-code"
+                    "name": "Web Development",
+                    "percentage": 70.0,
+                    "icon": "fa-code"
                 },
                 {
-                "name": "Mobile Game Development",
-                "percentage": 55.0,
-                "icon": "fa-gamepad"
+                    "name": "Mobile Game Development",
+                    "percentage": 55.0,
+                    "icon": "fa-gamepad"
                 },
                 {
-                "name": "Photography",
-                "percentage": 67.0,
-                "icon": "fa-camera"
+                    "name": "Photography",
+                    "percentage": 67.0,
+                    "icon": "fa-camera"
                 }
             ],
             "tools_technologies": [
@@ -306,32 +318,32 @@
             ],
             "organizations": [
                 {
-                "name": "Camera Indonesia - Regional Jawa Barat",
-                "position": "Active Member",
-                "membership_ongoing": false,
-                "date_start": "2015",
-                "date_end": "2018"
+                    "name": "Camera Indonesia - Regional Jawa Barat",
+                    "position": "Active Member",
+                    "membership_ongoing": false,
+                    "date_start": "2015",
+                    "date_end": "2018"
                 },
                 {
-                "name": "Himpunan Mahasiswa Komputer Politeknik Negeri Bandung",
-                "position": "Chief of Art & Culture Department",
-                "membership_ongoing": false,
-                "date_start": "2011",
-                "date_end": "2012"
+                    "name": "Himpunan Mahasiswa Komputer Politeknik Negeri Bandung",
+                    "position": "Chief of Art & Culture Department",
+                    "membership_ongoing": false,
+                    "date_start": "2011",
+                    "date_end": "2012"
                 },
                 {
-                "name": "Himpunan Mahasiswa Komputer Politeknik Negeri Bandung",
-                "position": "Active Member",
-                "membership_ongoing": false,
-                "date_start": "2010-10",
-                "date_end": "2013-09"
+                    "name": "Himpunan Mahasiswa Komputer Politeknik Negeri Bandung",
+                    "position": "Active Member",
+                    "membership_ongoing": false,
+                    "date_start": "2010-10",
+                    "date_end": "2013-09"
                 },
                 {
-                "name": "Forum Fotografer Sumedang",
-                "position": "Active Member",
-                "membership_ongoing": true,
-                "date_start": "2018",
-                "date_end": ""
+                    "name": "Forum Fotografer Sumedang",
+                    "position": "Active Member",
+                    "membership_ongoing": true,
+                    "date_start": "2018",
+                    "date_end": ""
                 }
             ],
             "projects": [

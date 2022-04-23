@@ -12,7 +12,10 @@
         "gender": "Pria",
         "nationality": "Indonesia",
         "headline": "Pengembang Perangkat Lunak & Fotografer",
-        "job": { "status": "Bekerja", "detail": "Bekerja sebagai Full Stack Developer" },
+        "job": {
+            "status": "Bekerja",
+            "detail": "Bekerja sebagai Full Stack Developer"
+        },
         "profile_picture_url": "assets/img/profpic_2020.webp",
         "profile_picture_thumbnail_url": "assets/img/profpic_2020_thumbnail.webp",
         "summary": "Berpengalaman sebagai Pengembang Perangkat Lunak selama 6 tahun dan Fotografer selama 3 tahun. Saya adalah seorang yang berorientasi pada hasil dan mempunyai perhatian lebih pada setiap detil pekerjaan. Saya selalu memberikan hasil pekerjaan yang berkualitas tinggi dengan tingkat kesalahan yang sangat rendah. Saya bisa bekerja dalam tim maupun individu tergantung skala pekerjaan. Saya senang dan selalu ingin belajar hal baru, sangat termotivasi untuk menantang diri saya sendiri untuk menyelesaikan setiap masalah.",
@@ -231,6 +234,15 @@
                 "date_expire": null,
                 "credential_id": "420183C72F20",
                 "credential_url": "https://www.hackerrank.com/certificates/420183c72f20"
+            },
+            {
+                "name": "Workshop REST API with Golang",
+                "organization": "Alterra Academy",
+                "credential_expire": false,
+                "date_issue": "2021-11",
+                "date_expire": null,
+                "credential_id": "024/SER/RAG/XI/2021",
+                "credential_url": null
             }
         ],
         "volunteer_experience": [
