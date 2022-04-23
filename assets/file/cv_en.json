@@ -1,8 +1,8 @@
 {
     "type": "Curriculum Vitae",
-    "version": "0.7 rev4",
+    "version": "0.8",
     "created_at": 1595304109812,
-    "updated_at": 1650013987896,
+    "updated_at": 1650689361565,
     "info": {
         "name": "Pandawa Sudewa",
         "fullname": "Pandawa Bagus Sudewa",
@@ -233,7 +233,7 @@
                 "date_issue": "2020-11",
                 "date_expire": null,
                 "credential_id": "420183C72F20",
-                "credential_url": "https://www.hackerrank.com/certificates/420183c72f20"
+                "credential_url": "https://www.hackerrank.com/certificates/420183c72f20?hr_r=1&utm_campaign=social-buttons&utm_medium=website&utm_source=certificate_social_share&social=website"
             },
             {
                 "name": "Workshop REST API with Golang",
@@ -467,10 +467,7 @@
             "Technology",
             "Computer",
             "Design",
-            "Nature",
-            "Japanese Culture",
-            "Swimming",
-            "Playing Guitar"
+            "Nature"
         ],
         "showcase": [
             {

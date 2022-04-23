@@ -1,8 +1,8 @@
 {
     "type": "Curriculum Vitae",
-    "version": "0.7 rev4",
+    "version": "0.8",
     "created_at": 1595304109812,
-    "updated_at": 1650641689483,
+    "updated_at": 1650689361565,
     "info": {
         "name": "Pandawa Sudewa",
         "fullname": "Pandawa Bagus Sudewa",
@@ -467,10 +467,7 @@
             "Teknologi",
             "Komputer",
             "Design",
-            "Alam",
-            "Kultur Jepang",
-            "Berenang",
-            "Bermain Gitar"
+            "Alam"
         ],
         "showcase": [
             {
