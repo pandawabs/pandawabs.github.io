@@ -10,13 +10,14 @@ import IconLogoWithLoading from "../icons/IconLogoWithLoading.vue"
           flex-wrap
           justify-content-between
           align-items-center
+          gap-3
         "
       >
         <a href="/" class="d-flex text-decoration-none">
           <icon-logo-with-loading/>
         </a>
         <ul class="list-inline mb-0">
-          <li class="list-inline-item">
+          <li class="list-inline-item mt-2 mt-sm-0">
             <div class="dropdown">
               <button
                 type="button"
@@ -36,7 +37,7 @@ import IconLogoWithLoading from "../icons/IconLogoWithLoading.vue"
               </ul>
             </div>
           </li>
-          <li class="list-inline-item">
+          <li class="list-inline-item mt-2 mt-sm-0">
             <button
               type="button"
               @click="sendEmail(cv.contact.email)"
@@ -50,7 +51,7 @@ import IconLogoWithLoading from "../icons/IconLogoWithLoading.vue"
               <i aria-hidden="true" class="fa fa-envelope fa-fw"></i>
             </button>
           </li>
-          <li class="list-inline-item">
+          <li class="list-inline-item mt-2 mt-sm-0">
             <button
               type="button"
               @click="doPrint()"
