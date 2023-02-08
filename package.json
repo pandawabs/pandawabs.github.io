@@ -1,0 +1,29 @@
+{
+  "name": "pandawabs-www",
+  "version": "2.0.0",
+  "author": "Pandawa Bagus Sudewa",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 4173",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.1.2",
+    "@loadingio/loading-bar": "^0.1.1",
+    "@popperjs/core": "^2.11.5",
+    "bootstrap": "^5.2.0",
+    "mitt": "^3.0.0",
+    "moment": "^2.29.4",
+    "swiper": "^8.3.2",
+    "vue": "^3.2.37"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^3.0.1",
+    "eslint": "^8.5.0",
+    "eslint-plugin-vue": "^9.0.0",
+    "sass": "^1.54.3",
+    "vite": "^3.0.1"
+  }
+}

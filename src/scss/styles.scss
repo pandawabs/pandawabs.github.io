@@ -1,0 +1,30 @@
+@import 'bootstrap/scss/bootstrap';
+@import "~fontawesome-free/scss/fontawesome";
+@import "~fontawesome-free/scss/solid";
+@import "~fontawesome-free/scss/brands";
+@import 'swiper/scss';
+@import 'swiper/scss/navigation';
+@import 'swiper/scss/pagination';
+
+@import 'utils/all';
+@import 'components/all';
+
+html, body {
+  overscroll-behavior: none;
+}
+
+.swiper {
+  &-button {
+    &-prev, &-next {
+      color: $blue;
+    }
+
+    &-prev::after, &-next::after {
+      font-size: 2rem;
+    }
+  }
+
+  &-pagination-bullet-active {
+    background: $blue;
+  }
+}

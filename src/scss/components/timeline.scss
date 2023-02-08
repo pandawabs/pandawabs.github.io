@@ -1,0 +1,48 @@
+.timeline {
+  &__dot {
+    margin-top: 2rem;
+
+    &::after, &--orange::after {
+      background-color: $blue;
+      border: 4px solid $white;
+      border-radius: 50%;
+      content: '';
+      height: 18px;
+      left: 0px;
+      position: absolute;
+      top: 9px;
+      width: 18px;
+      z-index: 1;
+    }
+
+    &--orange::after {
+      background-color: $orange;
+    }
+  }
+  &__line {
+    border-top: 2px solid $blue;
+    content: '';
+    left: 0;
+    margin-top: 1rem;
+    position: absolute;
+    width: 100%;
+
+    &--orange {
+      border-top: 2px solid $orange;
+    }
+
+    &--backline {
+      border-top: 2px solid;
+      border-image-slice: 1;
+      border-image-source: linear-gradient(to right, $orange 45%, $blue 55%);
+      border-width: 2px;
+    }
+  }
+  &__label {
+    color: $blue;
+
+    &--orange {
+      color: $orange;
+    }
+  }
+}

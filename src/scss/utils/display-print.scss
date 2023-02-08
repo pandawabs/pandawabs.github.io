@@ -1,0 +1,13 @@
+@media print {
+  .d-print-page-break {
+    page-break-before: always;
+  }
+}
+
+@page  
+{ 
+    size: auto;   /* auto is the initial value */ 
+
+    /* this affects the margin in the printer settings */ 
+    margin: 12.5mm 12.5mm;  
+}

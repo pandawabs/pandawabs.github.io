@@ -1,0 +1,449 @@
+{
+  "type": "Curriculum Vitae",
+  "language": "Bahasa Indonesia",
+  "version": "2.0",
+  "created_at": 1669402586599,
+  "updated_at": 1675867389642,
+  "fork_url": "https://github.com/pandawabs/pandawabs.github.io/",
+  "profile": {
+    "fullname": "Pandawa Bagus Sudewa",
+    "profpic_url": "/assets/profpic_2020.webp",
+    "summary": "Saya telah bekerja sebagai Software Engineer selama tujuh tahun dan Fotografer selama lima tahun. Saya adalah pribadi yang mengutamakan hasil pekerjaan berkualitas tinggi dengan tingkat kesalahan minim. Saya dapat bekerja dalam tim maupun individu berdasarkan skala proyek. Saya sangat senang mempelajari berbagai hal baru dan sangat termotivasi untuk menyelesaikan berbagai macam masalah.",
+    "birth": {
+      "date": "1994-08-04",
+      "place": "Sumedang, Jawa Barat, Indonesia"
+    },
+    "gender": "👨 Pria",
+    "nationality": "🇮🇩 WNI",
+    "job": {
+      "title": "💻 Software Engineer / 📷 Fotografer",
+      "status": "Terbuka untuk Bekerja",
+      "detail": "Terbuka untuk Bekerja sebagai Software Engineer"
+    },
+    "hobbies": "📸 🎧 🍿 🎸 🎤"
+  },
+  "expertise": [
+    {
+      "id": 1,
+      "name": "Pengembangan Web",
+      "icon": "🕸",
+      "description": "Saya mengerjakan pengembangan web secara menyeluruh dengan berbagai skala proyek. Teknologi yang saya gunakan adalah PHP (CodeIgniter, Laravel, Slim, Twig), JavaScript dengan runtime Node.js (hapi, Vue.js, SASS, Bootstrap, jQuery), MySQL, Redis, dan RabbitMQ. Saya juga menggunakan Docker untuk pengembangan dalam environment yang containerized."
+    },
+    {
+      "id": 2,
+      "name": "Pengembangan Aplikasi & Permainan Ponsel",
+      "icon": "📱",
+      "description": "Saya berpengalaman dalam pengembangan aplikasi dan permainan ponsel. Saya menggunakan Cocos2d-x/Cocos Creator untuk mengembangkan permainan 2D dan Unity atau Flutter untuk mengembangkan aplikasi ponsel."
+    },
+    {
+      "id": 3,
+      "name": "Fotografi",
+      "icon": "📸",
+      "description": "Saya menyediakan jasa fotografi, berfokus pada dokumentasi acara, potret, dan produk komersil. Saya juga melakukan dokumentasi ruang publik sebagai proyek personal. Saya berpengalaman mengoperasikan berbagai macam model kamera dan aplikasi manajemen dan penyuntingan foto (Adobe Lightroom and Adobe Photoshop)."
+    }
+  ],
+  "experiences": [
+    {
+      "id": 1,
+      "type": "education",
+      "school": "SDN Sukaraja 1 Sumedang",
+      "degree": "Sekolah Dasar",
+      "field": null,
+      "currently_studying": false,
+      "date_start": "2000",
+      "date_end": "2006",
+      "grade": null,
+      "activity_society": [
+        "Marching Band"
+      ]
+    },
+    {
+      "id": 2,
+      "type": "education",
+      "school": "SMP Negeri 1 Sumedang",
+      "degree": "Sekolah Menengah Pertama",
+      "field": null,
+      "currently_studying": false,
+      "date_start": "2006",
+      "date_end": "2008",
+      "grade": null,
+      "activity_society": []
+    },
+    {
+      "id": 3,
+      "type": "education",
+      "school": "SMA Negeri 1 Sumedang",
+      "degree": "Sekolah Menengah Atas",
+      "field": "Science",
+      "currently_studying": false,
+      "date_start": "2008",
+      "date_end": "2010",
+      "grade": null,
+      "activity_society": [
+        "Hiji-hiji Adinira Teater (ekstrakurikuler)"
+      ]
+    },
+    {
+      "id": 4,
+      "type": "education",
+      "school": "Politeknik Negeri Bandung",
+      "degree": "Diploma III",
+      "field": "Teknik Rekayasa Perangkat Lunak",
+      "currently_studying": false,
+      "date_start": "2010",
+      "date_end": "2013",
+      "grade": "3.08",
+      "activity_society": [
+        "Himpunan Mahasiswa Komputer Politeknik Negeri Bandung"
+      ]
+    },
+    {
+      "id": 5,
+      "type": "work",
+      "title": "Software Programmer",
+      "employment_type": "Full-Time",
+      "company": "The WALi Studio",
+      "location": "Cimahi, Jawa Barat, Indonesia",
+      "currently_working": false,
+      "date_start": "2013-09",
+      "date_end": "2018-03",
+      "job_description": "Develop main products: MyQuran, Brain Breaker, Timun Mas, Salman & Sofia AR+, Baby DressUp, Hijab DressUp. Lead external projects and develop internal backend system.",
+      "skills": [
+        "Mobile Game Development",
+        "Back-End Web Development",
+        "Augmented Reality (AR)",
+        "Cocos2d",
+        "Unity",
+        "C#",
+        "C++",
+        "JavaScript",
+        "PHP",
+        "CodeIgniter",
+        "Database Design",
+        "jQuery"
+      ]
+    },
+    {
+      "id": 6,
+      "type": "work",
+      "title": "Freelance Fotografer",
+      "employment_type": "Freelance",
+      "company": "",
+      "location": "Bandung, Jawa Barat, Indonesia",
+      "currently_working": false,
+      "date_start": "2015-11",
+      "date_end": "2018-03",
+      "job_description": "Do photography services: events, couple or group sessions, and portraits.",
+      "skills": [
+        "Event Photography",
+        "Portrait Photography",
+        "Adobe Lightroom",
+        "Adobe Photoshop",
+        "Photography"
+      ]
+    },
+    {
+      "id": 7,
+      "type": "work",
+      "title": "Fotografer",
+      "employment_type": "Self-employed",
+      "company": "Pandawa Sudewa Works",
+      "location": "Sumedang, Jawa Barat, Indonesia",
+      "currently_working": false,
+      "date_start": "2018-03",
+      "date_end": "2020-11",
+      "job_description": "Do photography services: events, commercial products, and couple sessions. Manage photography projects from pre-production to post-production.",
+      "skills": [
+        "Product Photography",
+        "Event Photography",
+        "Adobe Lightroom",
+        "Photography",
+        "Adobe Photoshop"
+      ]
+    },
+    {
+      "id": 8,
+      "type": "work",
+      "title": "Full Stack Developer",
+      "employment_type": "Full-time",
+      "company": "Niagahoster",
+      "location": "Yogyakarta, Indonesia",
+      "currently_working": false,
+      "date_start": "2020-11",
+      "date_end": "2023-01",
+      "job_description": "Develop and maintain internal services: main website, CRM, payment system, invoicing, loyalty program, product management tools, and third-party integrations.",
+      "skills": [
+        "Full-Stack Development",
+        "Back-End Web Development",
+        "Web Development",
+        "PHP",
+        "SASS",
+        "JavaScript",
+        "Laravel",
+        "Vue.js",
+        "Twig",
+        "Slim Framework",
+        "Redis",
+        "RabbitMQ",
+        "MySQL",
+        "Database Design"
+      ]
+    },
+    {
+      "id": 9,
+      "type": "work",
+      "title": "Freelance Software Engineer",
+      "employment_type": "Freelance",
+      "company": "",
+      "location": "Sumedang, Jawa Barat, Indonesia",
+      "currently_working": true,
+      "date_start": "2019-10",
+      "date_end": "",
+      "job_description": "Do website and mobile application developments from various projects with common and custom technologies.",
+      "skills": [
+        "Full-Stack Development",
+        "Web Development",
+        "Mobile Application Development",
+        "Mobile Game Development",
+        "PHP",
+        "SASS",
+        "JavaScript",
+        "Vue.js",
+        "Flutter",
+        "Laravel",
+        "Database Design"
+      ]
+    }
+  ],
+  "licenses_certifications": [
+    {
+      "id": 1,
+      "name": "Workshop Seni Media 2019",
+      "organization": "Kementrian Pendidikan dan Kebudayaan",
+      "date_issue": "2019-03",
+      "date_expire": null,
+      "credential_id": "700/E3/KB/2019",
+      "credential_url": null
+    },
+    {
+      "id": 2,
+      "name": "HackerRank Certificate: Problem Solving (Basic)",
+      "organization": "HackerRank",
+      "date_issue": "2020-11",
+      "date_expire": null,
+      "credential_id": "420183C72F20",
+      "credential_url": "https://www.hackerrank.com/certificates/420183c72f20?hr_r=1&utm_campaign=social-buttons&utm_medium=website&utm_source=certificate_social_share&social=website"
+    },
+    {
+      "id": 3,
+      "name": "Cloud Practitioner Essentials (Belajar Dasar AWS Cloud)",
+      "organization": "Dicoding Indonesia",
+      "date_issue": "2021-04",
+      "date_expire": "2024-04",
+      "credential_id": "EYX4RQ41JXDL",
+      "credential_url": "https://www.dicoding.com/certificates/EYX4RQ41JXDL"
+    },
+    {
+      "id": 4,
+      "name": "Workshop REST API with Golang",
+      "organization": "Alterra Academy",
+      "date_issue": "2021-11",
+      "date_expire": null,
+      "credential_id": "024/SER/RAG/XI/2021",
+      "credential_url": null
+    },
+    {
+      "id": 5,
+      "name": "Belajar Dasar Pemrograman JavaScript",
+      "organization": "Dicoding Indonesia",
+      "date_issue": "2022-11",
+      "date_expire": "2025-11",
+      "credential_id": "RVZKKOVGOZD5",
+      "credential_url": "https://www.dicoding.com/certificates/RVZKKOVGOZD5"
+    },
+    {
+      "id": 6,
+      "name": "Belajar Membuat Aplikasi Back-End untuk Pemula",
+      "organization": "Dicoding Indonesia",
+      "date_issue": "2023-01",
+      "date_expire": "2026-01",
+      "credential_id": "QLZ923NWMX5D",
+      "credential_url": "https://www.dicoding.com/certificates/QLZ923NWMX5D"
+    }
+  ],
+  "organizations": [
+    {
+      "id": 1,
+      "name": "Camera Indonesia - Regional Jawa Barat",
+      "position": "Member Aktif",
+      "membership_ongoing": false,
+      "date_start": "2015",
+      "date_end": "2018"
+    },
+    {
+      "id": 2,
+      "name": "Himpunan Mahasiswa Komputer Politeknik Negeri Bandung",
+      "position": "Ketua Departemen Seni dan Budaya",
+      "membership_ongoing": false,
+      "date_start": "2011",
+      "date_end": "2012"
+    },
+    {
+      "id": 3,
+      "name": "Himpunan Mahasiswa Komputer Politeknik Negeri Bandung",
+      "position": "Member Aktif",
+      "membership_ongoing": false,
+      "date_start": "2010-10",
+      "date_end": "2013-09"
+    },
+    {
+      "id": 4,
+      "name": "Forum Fotografer Sumedang",
+      "position": "Member Aktif",
+      "membership_ongoing": true,
+      "date_start": "2018",
+      "date_end": ""
+    }
+  ],
+  "voluntary_works": [
+    {
+      "id": 1,
+      "organization": "Kelas Inspirasi Sumedang",
+      "role": "Fotografer Dokumentasi",
+      "cause": "Edukasi",
+      "currently_volunteering": false,
+      "date_start": "2018-03",
+      "date_end": "2018-04"
+    },
+    {
+      "id": 2,
+      "organization": "Sumedang Progresif",
+      "role": "Fotografer Dokumentasi",
+      "cause": "Penanggulangan Bencana dan Kemanusiaan",
+      "currently_volunteering": false,
+      "date_start": "2020-04",
+      "date_end": "2020-10"
+    }
+  ],
+  "showcase": [
+    {
+      "id": 1,
+      "title": "Income Treats - Huat Huat Chinese New Year Game",
+      "category": "Permainan Basis Web",
+      "description": "Income Treats - Huat Huat Chinese New Year Game adalah proyek dari GLI (Game Lokal Indonesia) untuk Trimiy Singapore dan NTUC Income Singapore.",
+      "project_url": "https://www.gamelokalindonesia.com/projects/incometreats/game/",
+      "image_thumbnail": "/assets/showcase_incometreats.webp"
+    },
+    {
+      "id": 2,
+      "title": "Hijab DressUp",
+      "category": "Permainan Ponsel",
+      "description": "Hijab DressUp adalah permainan simulasi pakaian wanita dengan mode hijab. Permainan ini rilis di Android.",
+      "project_url": "https://play.google.com/store/apps/details?id=com.tws.games.hijabdressup",
+      "image_thumbnail": "/assets/showcase_hijabdressup.webp"
+    },
+    {
+      "id": 3,
+      "title": "Salman & Sofia AR+ Cards",
+      "category": "Aplikasi Ponsel",
+      "description": "Salman & Sofia AR+ Cards adalah aplikasi AR interaktif untuk belajar tata cara wudhu dan sholat bersama Salman & Sofia©. Aplikasi ini rilis di Android dan iOS.",
+      "project_url": "https://play.google.com/store/apps/details?id=salso.arcard.sholatwudhu",
+      "image_thumbnail": "/assets/showcase_salsoar.webp"
+    },
+    {
+      "id": 4,
+      "title": "Foto Produk Gratis #SiniPSWFotoin",
+      "category": "Jasa Fotografi",
+      "description": "#SiniPSWFotoin adalah program jasa foto produk gratis untuk UMKM sektor makanan dan minuman. Saat pandemi COVID-19, banyak orang memulai bisnis berskala kecil untuk bertahan hidup.",
+      "project_url": "https://www.instagram.com/explore/tags/sinipswfotoin/",
+      "image_thumbnail": "/assets/showcase_elburgeritto.webp"
+    }
+  ],
+  "contact": {
+    "email": "pandawa.bs@gmail.com",
+    "social_profiles": [
+      {
+        "id": 1,
+        "type": "linkedin",
+        "icon": "fa-linkedin",
+        "label": "LinkedIn",
+        "label_print": "Pandawa Sudewa",
+        "profile_url": "https://www.linkedin.com/in/pandawabs"
+      },
+      {
+        "id": 2,
+        "type": "instagram",
+        "icon": "fa-instagram",
+        "label": "Instagram",
+        "label_print": "@pandawabs",
+        "profile_url": "https://instagram.com/pandawabs"
+      },
+      {
+        "id": 3,
+        "type": "facebook",
+        "icon": "fa-facebook",
+        "label": "Facebook",
+        "label_print": "Pandawa Bagus Sudewa",
+        "profile_url": "https://facebook.com/pandawabs"
+      },
+      {
+        "id": 4,
+        "type": "github",
+        "icon": "fa-github",
+        "label": "GitHub",
+        "label_print": "@pandawabs",
+        "profile_url": "https://github.com/pandawabs"
+      }
+    ]
+  },
+  "templates": {
+    "header": {
+      "email": "Kirim Saya Email",
+      "print": "Cetak Resume Saya"
+    },
+    "sections": {
+      "headline": {
+        "hobbies": "Hobi"
+      },
+      "expertise": {
+        "title": "Apa Yang Saya Lakukan"
+      },
+      "experience": {
+        "title": "Garis Waktu Pengalaman",
+        "title_print_work": "Pengalaman Bekerja",
+        "title_print_education": "Pendidikan",
+        "work_skills": "Keahlian",
+        "education_activities": "Aktifitas dan Kemasyarakatan"
+      },
+      "showcase": {
+        "title": "Etalase"
+      },
+      "learned": {
+        "title": "Pembelajar Seumur Hidup",
+        "title_link": "Klik untuk Melihat",
+        "issued": "Diterbitkan",
+        "expire": "Berakhir",
+        "no_expire": "Tidak Ada Tanggal Berakhir",
+        "credential": "ID"
+      },
+      "organization": {
+        "title": "Menjadi Pribadi Aktif"
+      },
+      "voluntary": {
+        "title": "Kontribusi Untuk Masyarakat"
+      },
+      "contact": {
+        "title": "Kontak"
+      }
+    },
+    "footer": {
+      "last_update": "Terakhir diperbarui",
+      "powered_by": "Didukung oleh",
+      "fork": "Fork repositori ini"
+    },
+    "commons": {
+      "at": "di",
+      "present": "Sekarang"
+    }
+  }
+}
