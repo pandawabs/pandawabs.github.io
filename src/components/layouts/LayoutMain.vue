@@ -17,12 +17,8 @@ import SectionShowcase from "../sections/SectionShowcase.vue"
       <div class="container">
         <div class="row row-cols-1 row-cols-md-2">
           <div class="col px-0">
-            <div class="row">
-              <section-showcase/>
-            </div>
-            <div class="row">
-              <section-learned/>
-            </div>
+            <section-showcase/>
+            <section-learned/>
           </div>
           <div class="col px-0">
             <div class="row row-cols-1 row-cols-lg-2">

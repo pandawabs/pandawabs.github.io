@@ -7,7 +7,7 @@ import CareerJourneyTimeline from "../CareerJourneyTimeline.vue";
   <section id="section-career-journey" class="mt-3 mt-lg-5 overflow-hidden">
     <div class="container">
       <h4 class="mb-4 d-block d-print-none">{{ cv.templates.sections.experience.title }}</h4>
-      <div class="row d-none d-print-flex">
+      <div class="row d-none d-print-block mb-5">
         <div class="col-12">
           <h4 class="mb-4">💼 {{ cv.templates.sections.experience.title_print_work }}</h4>
           <div class="mb-4" v-for="exp in workExperiences(cv.experiences)" :key="exp.id">
@@ -23,11 +23,13 @@ import CareerJourneyTimeline from "../CareerJourneyTimeline.vue";
             <p class="mb-2" v-if="exp.job_description">
               {{ exp.job_description }}
             </p>
-            <p v-if="exp.skills">
+            <p class="mb-0" v-if="exp.skills">
               <strong>{{ cv.templates.sections.experience.work_skills }}:</strong> {{ exp.skills.join(' · ') }}
             </p>
           </div>
         </div>
+      </div>
+      <div class="row d-none d-print-block mb-5">
         <div class="col-12">
           <h4 class="mb-4">🎓 {{ cv.templates.sections.experience.title_print_education }}</h4>
           <div class="mb-4" v-for="exp in educationExperiences(cv.experiences)" :key="exp.id">
@@ -37,7 +39,7 @@ import CareerJourneyTimeline from "../CareerJourneyTimeline.vue";
               <span v-else>{{ moment(exp.date_end).format("MMM YYYY") }}</span>
             </small>
             <h5>{{ exp.school }} <small class="text-muted fw-normal">| {{ exp.degree }}<span v-if="exp.grade">, {{ exp.grade }}</span></small></h5>
-            <small class="text-muted" v-if="exp.activity_society.length > 0">
+            <small class="mb-0 text-muted" v-if="exp.activity_society.length > 0">
               {{ cv.templates.sections.experience.education_activities }}: {{ exp.activity_society.join(', ') }}
             </small>
           </div>

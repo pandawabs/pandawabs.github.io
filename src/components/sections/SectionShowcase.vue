@@ -27,7 +27,7 @@ import ShowcaseItem from "../ShowcaseItem.vue"
           />
         </swiper-slide>
       </swiper>
-      <div class="d-none d-print-block mb-4">
+      <div class="d-none d-print-block mb-5">
         <showcase-item v-for="showcaseItem in [...cv.showcase].reverse()" :key="showcaseItem.id"
           :title="showcaseItem.title"
           :category="showcaseItem.category"

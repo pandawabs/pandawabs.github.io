@@ -10,6 +10,7 @@
 @import 'components/all';
 
 html, body {
+  overflow-x: hidden;
   overscroll-behavior: none;
 }
 
