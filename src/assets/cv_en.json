@@ -1,14 +1,14 @@
 {
   "type": "Curriculum Vitae",
   "language": "English",
-  "version": "2.0",
+  "version": "2.0r1",
   "created_at": 1669402586599,
-  "updated_at": 1675867389642,
+  "updated_at": 1676118705838,
   "fork_url": "https://github.com/pandawabs/pandawabs.github.io/",
   "profile": {
     "fullname": "Pandawa Bagus Sudewa",
     "profpic_url": "/assets/profpic_2020.webp",
-    "summary": "I've been working as Software Engineer for about seven years and Photographer for about five years. I'm a result-driven person who delivers high-quality work outputs with minimum faults. I could work in a team or individually, depending on the project scale. I love and am eager to learn new skills, and highly motivated to challenge myself to solve any problem.",
+    "summary": "A skilled software engineer with 7 years of experience in developing and maintaining efficient software solutions. Proficient in a range of technologies, including Java, Python, and JavaScript. Additionally, experienced in photography, with 5 years of experience in capturing and refining visual content. A results-oriented individual who prioritizes delivering projects with a high level of accuracy and within required timelines. Able to adapt to both individual and team environments, and always open to learning and taking on new challenges.",
     "birth": {
       "date": "1994-08-04",
       "place": "Sumedang, West Java, Indonesia"
@@ -27,19 +27,19 @@
       "id": 1,
       "name": "Web Development",
       "icon": "🕸",
-      "description": "I do full-stack web development with various project scales. Stacks I've used are PHP (CodeIgniter, Laravel, Slim, Twig), JavaScript with Node.js runtime (hapi, Vue.js, SASS, Bootstrap, jQuery), MySQL, Redis, and RabbitMQ. I also use Docker for development in containerized environments."
+      "description": "Full-stack experience using technologies such as PHP, JavaScript, and databases like MySQL and Redis, as well as message broker software like RabbitMQ. Adept in using Docker for containerized development environments."
     },
     {
       "id": 2,
       "name": "Mobile Application & Game Development",
       "icon": "📱",
-      "description": "I have experience in mobile application and game development. I use Cocos2d-x/Cocos Creator to develop 2D games and Unity or Flutter to develop mobile applications."
+      "description": "Proficient in developing mobile apps and 2D games using Unity, Flutter, and Cocos2d-x/Cocos Creator."
     },
     {
       "id": 3,
       "name": "Photography",
       "icon": "📸",
-      "description": "I do photography services, focusing on event documentaries, portraits, and commercial products. I also do street documentaries as a personal project. I have experience operating some camera models and photo management and editing tools (Adobe Lightroom and Adobe Photoshop)."
+      "description": "Specializing in event, portrait, and product photography, as well as street documentary photography as a personal project. Experienced in using Adobe Lightroom and Photoshop, and familiar with operating various camera models."
     }
   ],
   "experiences": [
