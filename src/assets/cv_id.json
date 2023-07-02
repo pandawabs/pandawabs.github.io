@@ -1,14 +1,14 @@
 {
   "type": "Curriculum Vitae",
   "language": "Bahasa Indonesia",
-  "version": "2.0",
+  "version": "2.0r2",
   "created_at": 1669402586599,
-  "updated_at": 1675867389642,
+  "updated_at": 1688286177005,
   "fork_url": "https://github.com/pandawabs/pandawabs.github.io/",
   "profile": {
     "fullname": "Pandawa Bagus Sudewa",
     "profpic_url": "/assets/profpic_2020.webp",
-    "summary": "Saya telah bekerja sebagai Software Engineer selama tujuh tahun dan Fotografer selama lima tahun. Saya adalah pribadi yang mengutamakan hasil pekerjaan berkualitas tinggi dengan tingkat kesalahan minim. Saya dapat bekerja dalam tim maupun individu berdasarkan skala proyek. Saya sangat senang mempelajari berbagai hal baru dan sangat termotivasi untuk menyelesaikan berbagai macam masalah.",
+    "summary": "Saya telah bekerja sebagai Software Engineer selama tujuh tahun. Saya adalah pribadi yang mengutamakan hasil pekerjaan berkualitas tinggi dengan tingkat kesalahan minim. Saya dapat bekerja dalam tim maupun individu berdasarkan skala proyek. Saya sangat senang mempelajari berbagai hal baru dan sangat termotivasi untuk menyelesaikan berbagai macam masalah.",
     "birth": {
       "date": "1994-08-04",
       "place": "Sumedang, Jawa Barat, Indonesia"
@@ -16,7 +16,7 @@
     "gender": "👨 Pria",
     "nationality": "🇮🇩 WNI",
     "job": {
-      "title": "💻 Software Engineer / 📷 Fotografer",
+      "title": "💻 Software Engineer",
       "status": "Terbuka untuk Bekerja",
       "detail": "Terbuka untuk Bekerja sebagai Software Engineer"
     },
@@ -33,13 +33,7 @@
       "id": 2,
       "name": "Pengembangan Aplikasi & Permainan Ponsel",
       "icon": "📱",
-      "description": "Saya berpengalaman dalam pengembangan aplikasi dan permainan ponsel. Saya menggunakan Cocos2d-x/Cocos Creator untuk mengembangkan permainan 2D dan Unity atau Flutter untuk mengembangkan aplikasi ponsel."
-    },
-    {
-      "id": 3,
-      "name": "Fotografi",
-      "icon": "📸",
-      "description": "Saya menyediakan jasa fotografi, berfokus pada dokumentasi acara, potret, dan produk komersil. Saya juga melakukan dokumentasi ruang publik sebagai proyek personal. Saya berpengalaman mengoperasikan berbagai macam model kamera dan aplikasi manajemen dan penyuntingan foto (Adobe Lightroom and Adobe Photoshop)."
+      "description": "Berpengalaman dalam pengembangan aplikasi dan permainan ponsel. Menggunakan Unity (C#), Flutter (Dart), maupun Cocos2d-x/Cocos Creator (C++) untuk pengembangan permainan 2D dan aplikasi ponsel."
     }
   ],
   "experiences": [
@@ -107,7 +101,7 @@
       "currently_working": false,
       "date_start": "2013-09",
       "date_end": "2018-03",
-      "job_description": "Develop main products: MyQuran, Brain Breaker, Timun Mas, Salman & Sofia AR+, Baby DressUp, Hijab DressUp. Lead external projects and develop internal backend system.",
+      "job_description": "Mengembangkan produk utama: MyQuran, Brain Breaker, Timun Mas, Salman & Sofia AR+, Baby DressUp, Hijab DressUp. Memimpin beberapa proyek eksternal and mengembangkan sistem internal.",
       "skills": [
         "Mobile Game Development",
         "Back-End Web Development",
@@ -133,7 +127,7 @@
       "currently_working": false,
       "date_start": "2015-11",
       "date_end": "2018-03",
-      "job_description": "Do photography services: events, couple or group sessions, and portraits.",
+      "job_description": "Melakukan jasa fotografi: acara, pasangan maupun sesi grup dan portrait.",
       "skills": [
         "Event Photography",
         "Portrait Photography",
@@ -152,7 +146,7 @@
       "currently_working": false,
       "date_start": "2018-03",
       "date_end": "2020-11",
-      "job_description": "Do photography services: events, commercial products, and couple sessions. Manage photography projects from pre-production to post-production.",
+      "job_description": "Melakukan jasa fotografi: acara, produk komersil, dan sesi foto pasangan. Mengatur proyek fotografi dari pre-production sampai post-production.",
       "skills": [
         "Product Photography",
         "Event Photography",
@@ -171,7 +165,7 @@
       "currently_working": false,
       "date_start": "2020-11",
       "date_end": "2023-01",
-      "job_description": "Develop and maintain internal services: main website, CRM, payment system, invoicing, loyalty program, product management tools, and third-party integrations.",
+      "job_description": "Mengembangkan dan perawatan layanan internal: situs utama, CRM, payment system, invoicing, loyalty program, product management tools, dan integrasi third-party.",
       "skills": [
         "Full-Stack Development",
         "Back-End Web Development",
@@ -199,7 +193,7 @@
       "currently_working": true,
       "date_start": "2019-10",
       "date_end": "",
-      "job_description": "Do website and mobile application developments from various projects with common and custom technologies.",
+      "job_description": "Melakukan jasa pengembangan website dan aplikasi mobile baik menggunakan teknologi standar maupun custom.",
       "skills": [
         "Full-Stack Development",
         "Web Development",
@@ -349,14 +343,6 @@
       "description": "Salman & Sofia AR+ Cards adalah aplikasi AR interaktif untuk belajar tata cara wudhu dan sholat bersama Salman & Sofia©. Aplikasi ini rilis di Android dan iOS.",
       "project_url": "https://play.google.com/store/apps/details?id=salso.arcard.sholatwudhu",
       "image_thumbnail": "/assets/showcase_salsoar.webp"
-    },
-    {
-      "id": 4,
-      "title": "Foto Produk Gratis #SiniPSWFotoin",
-      "category": "Jasa Fotografi",
-      "description": "#SiniPSWFotoin adalah program jasa foto produk gratis untuk UMKM sektor makanan dan minuman. Saat pandemi COVID-19, banyak orang memulai bisnis berskala kecil untuk bertahan hidup.",
-      "project_url": "https://www.instagram.com/explore/tags/sinipswfotoin/",
-      "image_thumbnail": "/assets/showcase_elburgeritto.webp"
     }
   ],
   "contact": {
@@ -393,6 +379,14 @@
         "label": "GitHub",
         "label_print": "@pandawabs",
         "profile_url": "https://github.com/pandawabs"
+      },
+      {
+        "id": 5,
+        "type": "medium",
+        "icon": "fa-medium",
+        "label": "Medium",
+        "label_print": "@pandawabs",
+        "profile_url": "https://medium.com/@pandawabs"
       }
     ]
   },
@@ -439,7 +433,8 @@
     "footer": {
       "last_update": "Terakhir diperbarui",
       "powered_by": "Didukung oleh",
-      "fork": "Fork repositori ini"
+      "fork": "Fork repositori ini",
+      "made_by": "Situs ini terbuka untuk direproduksi"
     },
     "commons": {
       "at": "di",

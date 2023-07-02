@@ -21,7 +21,7 @@ import SectionShowcase from "../sections/SectionShowcase.vue"
             <section-learned/>
           </div>
           <div class="col px-0">
-            <div class="row row-cols-1 row-cols-lg-2">
+            <div class="row row-cols-1">
               <div class="col">
                 <section-organization/>
               </div>
