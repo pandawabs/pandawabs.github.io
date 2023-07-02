@@ -1,14 +1,14 @@
 {
   "type": "Curriculum Vitae",
   "language": "English",
-  "version": "2.0r1",
+  "version": "2.0r2",
   "created_at": 1669402586599,
-  "updated_at": 1676118705838,
+  "updated_at": 1688286177005,
   "fork_url": "https://github.com/pandawabs/pandawabs.github.io/",
   "profile": {
     "fullname": "Pandawa Bagus Sudewa",
     "profpic_url": "/assets/profpic_2020.webp",
-    "summary": "A skilled software engineer with 7 years of experience in developing and maintaining efficient software solutions. Proficient in a range of technologies, including PHP, JavaScript, and C++. Additionally, experienced in photography, with 5 years of experience in capturing and refining visual content. A results-oriented individual who prioritizes delivering projects with a high level of accuracy and within required timelines. Able to adapt to both individual and team environments, and always open to learning and taking on new challenges.",
+    "summary": "A skilled software engineer with 7 years of experience in developing and maintaining efficient software solutions. Proficient in a range of technologies, including PHP, JavaScript, and C++. A results-oriented individual who prioritizes delivering projects with a high level of accuracy and within required timelines. Able to adapt to both individual and team environments, and always open to learning and taking on new challenges.",
     "birth": {
       "date": "1994-08-04",
       "place": "Sumedang, West Java, Indonesia"
@@ -16,7 +16,7 @@
     "gender": "👨 Male",
     "nationality": "🇮🇩 Indonesian",
     "job": {
-      "title": "💻 Software Engineer / 📷 Photographer",
+      "title": "💻 Software Engineer",
       "status": "Open to Work",
       "detail": "Open to Work as Software Engineer"
     },
@@ -25,7 +25,7 @@
   "expertise": [
     {
       "id": 1,
-      "name": "Web Development",
+      "name": "Full-Stack Web Development",
       "icon": "🕸",
       "description": "Full-stack experience using technologies such as PHP, JavaScript, and databases like MySQL and Redis, as well as message broker software like RabbitMQ. Adept in using Docker for containerized development environments."
     },
@@ -33,13 +33,7 @@
       "id": 2,
       "name": "Mobile Application & Game Development",
       "icon": "📱",
-      "description": "Proficient in developing mobile apps and 2D games using Unity, Flutter, and Cocos2d-x/Cocos Creator."
-    },
-    {
-      "id": 3,
-      "name": "Photography",
-      "icon": "📸",
-      "description": "Specializing in event, portrait, and product photography, as well as street documentary photography as a personal project. Experienced in using Adobe Lightroom and Photoshop, and familiar with operating various camera models."
+      "description": "Proficient in developing mobile apps and 2D games using Unity (C#), Flutter (Dart), and Cocos2d-x game engine (JS/C++/Java/Obj-C)."
     }
   ],
   "experiences": [
@@ -349,14 +343,6 @@
       "description": "Salman & Sofia AR+ Cards is an AR interactive application to learn wudhu and sholat with Salman & Sofia©. Released on Android and iOS platform.",
       "project_url": "https://play.google.com/store/apps/details?id=salso.arcard.sholatwudhu",
       "image_thumbnail": "/assets/showcase_salsoar.webp"
-    },
-    {
-      "id": 4,
-      "title": "Free Product Photoshoot #SiniPSWFotoin",
-      "category": "Photography Service",
-      "description": "#SiniPSWFotoin is a free product photoshoot program for MSME - Food & Culinary sector. Due to COVID-19, many people started to create small business to survive at this pandemic.",
-      "project_url": "https://www.instagram.com/explore/tags/sinipswfotoin/",
-      "image_thumbnail": "/assets/showcase_elburgeritto.webp"
     }
   ],
   "contact": {
@@ -393,6 +379,14 @@
         "label": "GitHub",
         "label_print": "@pandawabs",
         "profile_url": "https://github.com/pandawabs"
+      },
+      {
+        "id": 5,
+        "type": "medium",
+        "icon": "fa-medium",
+        "label": "Medium",
+        "label_print": "@pandawabs",
+        "profile_url": "https://medium.com/@pandawabs"
       }
     ]
   },
@@ -439,7 +433,8 @@
     "footer": {
       "last_update": "Last update",
       "powered_by": "Powered by",
-      "fork": "Fork this repository"
+      "fork": "Fork this repository",
+      "made_by": "This site is open to reproduce"
     },
     "commons": {
       "at": "at",
