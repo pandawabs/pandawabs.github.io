@@ -1,14 +1,14 @@
 {
   "type": "Curriculum Vitae",
   "language": "English",
-  "version": "2.0r2",
+  "version": "2.0r3",
   "created_at": 1669402586599,
-  "updated_at": 1688286177005,
+  "updated_at": 1730299781166,
   "fork_url": "https://github.com/pandawabs/pandawabs.github.io/",
   "profile": {
     "fullname": "Pandawa Bagus Sudewa",
     "profpic_url": "/assets/profpic_2020.webp",
-    "summary": "A skilled software engineer with 7 years of experience in developing and maintaining efficient software solutions. Proficient in a range of technologies, including PHP, JavaScript, and C++. A results-oriented individual who prioritizes delivering projects with a high level of accuracy and within required timelines. Able to adapt to both individual and team environments, and always open to learning and taking on new challenges.",
+    "summary": "A skilled software engineer with nine years of experience developing and maintaining efficient software solutions. Proficient in various technologies, including PHP, JavaScript, C++, Java, Python, and more. A results-oriented person who prioritizes delivering projects accurately and within required timelines. Able to adapt to both individual and team environments and always open to learning and taking on new challenges.",
     "birth": {
       "date": "1994-08-04",
       "place": "Sumedang, West Java, Indonesia"
@@ -17,8 +17,8 @@
     "nationality": "🇮🇩 Indonesian",
     "job": {
       "title": "💻 Software Engineer",
-      "status": "Open to Work",
-      "detail": "Open to Work as Software Engineer"
+      "status": "Full-time Working",
+      "detail": "Open to Remote Working as Software Engineer"
     },
     "hobbies": "📸 🎧 🍿 🎸 🎤"
   },
@@ -31,9 +31,9 @@
     },
     {
       "id": 2,
-      "name": "Mobile Application & Game Development",
+      "name": "Multiplatform Application & Game Development",
       "icon": "📱",
-      "description": "Proficient in developing mobile apps and 2D games using Unity (C#), Flutter (Dart), and Cocos2d-x game engine (JS/C++/Java/Obj-C)."
+      "description": "Proficient in developing multiplatform apps and 2D games using Unity (C#), Flutter (Dart), and Cocos2d-x game engine (JS/C++/Java/Obj-C)."
     }
   ],
   "experiences": [
@@ -195,16 +195,37 @@
       "date_end": "",
       "job_description": "Do website and mobile application developments from various projects with common and custom technologies.",
       "skills": [
-        "Full-Stack Development",
-        "Web Development",
-        "Mobile Application Development",
-        "Mobile Game Development",
+        "Full-Stack Web Development",
+        "Multiplatform Application Development",
+        "Multiplatform Game Development",
         "PHP",
         "SASS",
         "JavaScript",
         "Vue.js",
         "Flutter",
         "Laravel",
+        "Database Design"
+      ]
+    },
+    {
+      "id": 10,
+      "type": "work",
+      "title": "Software Engineer",
+      "employment_type": "Contract",
+      "company": "Hariff Defense",
+      "location": "Bandung, Indonesia",
+      "currently_working": true,
+      "date_start": "2023-07",
+      "date_end": "",
+      "job_description": "Develops and maintains the battle command center–Poskotis as a part of the Battle Management System CY-16H.",
+      "skills": [
+        "Desktop Application Development",
+        "Windows Presentation Foundation",
+        "Research and Development",
+        "C++",
+        "C#",
+        ".NET Framework",
+        "SQLite",
         "Database Design"
       ]
     }
@@ -263,6 +284,42 @@
       "date_expire": "2026-01",
       "credential_id": "QLZ923NWMX5D",
       "credential_url": "https://www.dicoding.com/certificates/QLZ923NWMX5D"
+    },
+    {
+      "id": 7,
+      "name": "Memulai Pemrograman dengan Python",
+      "organization": "Dicoding Indonesia",
+      "date_issue": "2023-10",
+      "date_expire": "2026-10",
+      "credential_id": "81P27652OZOY",
+      "credential_url": "https://www.dicoding.com/certificates/81P27652OZOY"
+    },
+    {
+      "id": 8,
+      "name": "Belajar Dasar Visualisasi Data",
+      "organization": "Dicoding Indonesia",
+      "date_issue": "2023-10",
+      "date_expire": "2026-10",
+      "credential_id": "EYX4Y8G4OZDL",
+      "credential_url": "https://www.dicoding.com/certificates/EYX4Y8G4OZDL"
+    },
+    {
+      "id": 9,
+      "name": "Belajar Machine Learning untuk Pemula",
+      "organization": "Dicoding Indonesia",
+      "date_issue": "2023-11",
+      "date_expire": "2026-11",
+      "credential_id": "2VX36Q2YJXYQ",
+      "credential_url": "https://www.dicoding.com/certificates/2VX36Q2YJXYQ"
+    },
+    {
+      "id": 10,
+      "name": "Belajar Pengembangan Machine Learning",
+      "organization": "Dicoding Indonesia",
+      "date_issue": "2024-02",
+      "date_expire": "2027-02",
+      "credential_id": "NVP77N2R4PR0",
+      "credential_url": "https://www.dicoding.com/certificates/NVP77N2R4PR0"
     }
   ],
   "organizations": [
@@ -421,10 +478,10 @@
         "credential": "Credential ID"
       },
       "organization": {
-        "title": "Be Active Person"
+        "title": "Communities"
       },
       "voluntary": {
-        "title": "Social Contribution"
+        "title": "Social Contributions"
       },
       "contact": {
         "title": "Contact"
@@ -434,7 +491,8 @@
       "last_update": "Last update",
       "powered_by": "Powered by",
       "fork": "Fork this repository",
-      "made_by": "This site is open to reproduce"
+      "made_by": "Released under the",
+      "license": "MIT license"
     },
     "commons": {
       "at": "at",
