@@ -1,14 +1,14 @@
 {
   "type": "Curriculum Vitae",
   "language": "English",
-  "version": "2.0r3",
+  "version": "2.0r4",
   "created_at": 1669402586599,
-  "updated_at": 1730299781166,
+  "updated_at": 1733590899147,
   "fork_url": "https://github.com/pandawabs/pandawabs.github.io/",
   "profile": {
     "fullname": "Pandawa Bagus Sudewa",
-    "profpic_url": "/assets/profpic_2020.webp",
-    "summary": "A skilled software engineer with nine years of experience developing and maintaining efficient software solutions. Proficient in various technologies, including PHP, JavaScript, C++, Java, Python, and more. A results-oriented person who prioritizes delivering projects accurately and within required timelines. Able to adapt to both individual and team environments and always open to learning and taking on new challenges.",
+    "profpic_url": "/assets/profpic_2024_thumbnail2.avif",
+    "summary": "A skilled software engineer with nine years of experience developing and maintaining efficient software solutions. Proficient in various technologies, including C#, PHP, JavaScript, C++, Java, Python, and more. A results-oriented person who prioritizes delivering projects accurately and within required timelines. Able to adapt to both individual and team environments and always open to learning and taking on new challenges.",
     "birth": {
       "date": "1994-08-04",
       "place": "Sumedang, West Java, Indonesia"
@@ -228,6 +228,18 @@
         "SQLite",
         "Database Design"
       ]
+    },
+    {
+      "id": 11,
+      "type": "education",
+      "school": "Bina Nusantara Online",
+      "degree": "Bachelor's Degree",
+      "field": "Computer Science",
+      "currently_studying": true,
+      "date_start": "2024",
+      "date_end": "2026 (expected)",
+      "grade": "3.51",
+      "activity_society": []
     }
   ],
   "licenses_certifications": [
@@ -491,7 +503,7 @@
       "last_update": "Last update",
       "powered_by": "Powered by",
       "fork": "Fork this repository",
-      "made_by": "Released under the",
+      "made_by": "This template released under the",
       "license": "MIT license"
     },
     "commons": {
