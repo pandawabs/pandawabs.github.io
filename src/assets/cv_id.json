@@ -1,14 +1,14 @@
 {
   "type": "Curriculum Vitae",
   "language": "Bahasa Indonesia",
-  "version": "2.0r3",
+  "version": "2.0r4",
   "created_at": 1669402586599,
-  "updated_at": 1730299781166,
+  "updated_at": 1733590899147,
   "fork_url": "https://github.com/pandawabs/pandawabs.github.io/",
   "profile": {
     "fullname": "Pandawa Bagus Sudewa",
-    "profpic_url": "/assets/profpic_2020.webp",
-    "summary": "Saya telah bekerja sebagai Software Engineer sembilan tahun. Saya adalah pribadi yang mengutamakan hasil pekerjaan berkualitas tinggi dengan tingkat kesalahan minim. Saya dapat bekerja dalam tim maupun individu berdasarkan skala proyek. Saya sangat senang mempelajari berbagai hal baru dan sangat termotivasi untuk menyelesaikan berbagai macam masalah.",
+    "profpic_url": "/assets/profpic_2024_thumbnail2.avif",
+    "summary": "Seorang insinyur perangkat lunak berpengalaman dengan sembilan tahun keahlian dalam mengembangkan dan memelihara solusi perangkat lunak yang efisien. Mahir dalam berbagai teknologi, termasuk C#, PHP, JavaScript, C++, Java, Python, dan lainnya. Berorientasi pada hasil, dengan fokus pada penyelesaian proyek secara akurat dan sesuai tenggat waktu. Mampu beradaptasi dalam lingkungan kerja individu maupun tim, serta selalu terbuka untuk belajar dan menghadapi tantangan baru.",
     "birth": {
       "date": "1994-08-04",
       "place": "Sumedang, Jawa Barat, Indonesia"
@@ -227,6 +227,20 @@
         ".NET Framework",
         "SQLite",
         "Database Design"
+      ]
+    },
+    {
+      "id": 11,
+      "type": "education",
+      "school": "Bina Nusantara Online",
+      "degree": "Sarjana",
+      "field": "Sains Komputer",
+      "currently_studying": true,
+      "date_start": "2024",
+      "date_end": "2026 (ekspetasi)",
+      "grade": "3.51",
+      "activity_society": [
+        "Himpunan Mahasiswa Komputer Politeknik Negeri Bandung"
       ]
     }
   ],
@@ -491,7 +505,7 @@
       "last_update": "Terakhir diperbarui",
       "powered_by": "Didukung oleh",
       "fork": "Fork repositori ini",
-      "made_by": "Dirilis dengan",
+      "made_by": "Templat ini dirilis dengan",
       "license": "Lisensi MIT"
     },
     "commons": {

@@ -7,7 +7,7 @@ import SectionContact from "../sections/SectionContact.vue"
   <section-contact class="d-none d-print-block"/>
   <footer class="py-3 mt-4 border-top d-print-none">
     <div class="container d-flex flex-wrap justify-content-between">
-      <div class="col-md-6 d-flex align-items-start flex-column">
+      <div class="col-md-8 d-flex align-items-start flex-column">
         <span><a class="text-muted text-decoration-none" href="#main">© {{ moment().format('YYYY') }} {{ cv.profile.fullname }}</a> · <small><span class="text-muted">{{ cv.templates.footer.made_by }} <a :href="cv.fork_url + 'blob/master/README.md#license'" class="text-decoration-none" target="_blank" rel="external nofollow">{{ cv.templates.footer.license }}</a></span></small></span>
         <small class="text-muted">v{{ cv.version }} — {{ `${cv.templates.footer.last_update} ` + moment(cv.updated_at).fromNow(false) }} · <a href="https://pages.github.com/" :title="cv.templates.footer.powered_by + ' GitHub Pages'" class="text-decoration-none" target="_blank" rel="external nofollow"><i aria-hidden="true" class="fab fa-github"></i> GitHub Pages</a></small>
       </div>
