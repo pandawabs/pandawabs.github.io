@@ -1,0 +1,51 @@
+<script setup lang="ts">
+import type { License } from '@/types/cv'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
+import { useLanguage } from '@/composables/useLanguage'
+import { ExternalLink, Award, Calendar } from '@lucide/vue'
+
+defineProps<{
+  licenses: License[]
+}>()
+
+const { t } = useLanguage()
+</script>
+
+<template>
+  <section id="certifications" class="max-w-5xl mx-auto px-4 py-8">
+    <h2 class="text-xl font-semibold mb-4">{{ t().certifications }}</h2>
+    <div class="grid gap-4 sm:grid-cols-2">
+      <Card v-for="lic in licenses" :key="lic.id">
+        <CardHeader>
+          <CardTitle class="text-sm flex items-start gap-2">
+            <Award class="size-4 mt-0.5 shrink-0 text-primary" />
+            {{ lic.name }}
+          </CardTitle>
+          <CardDescription>{{ lic.organization }}</CardDescription>
+        </CardHeader>
+        <CardContent class="space-y-3">
+          <div class="flex items-center gap-2 text-xs text-muted-foreground">
+            <Calendar class="size-3" />
+            {{ lic.date_issue }}
+            <span v-if="lic.date_expire"> — {{ lic.date_expire }}</span>
+          </div>
+          <Badge variant="outline" class="text-xs">ID: {{ lic.credential_id }}</Badge>
+          <a
+            v-if="lic.credential_url"
+            :href="lic.credential_url"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="block"
+          >
+            <Button variant="outline" size="sm" class="w-full text-xs gap-1">
+              <ExternalLink class="size-3" />
+              {{ t().viewCredential }}
+            </Button>
+          </a>
+        </CardContent>
+      </Card>
+    </div>
+  </section>
+</template>

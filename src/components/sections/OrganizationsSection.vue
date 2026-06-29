@@ -1,0 +1,43 @@
+<script setup lang="ts">
+import type { Organization } from '@/types/cv'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { useLanguage } from '@/composables/useLanguage'
+import { Users, Calendar } from '@lucide/vue'
+
+defineProps<{
+  organizations: Organization[]
+}>()
+
+const { t } = useLanguage()
+</script>
+
+<template>
+  <section id="organizations" class="max-w-5xl mx-auto px-4 py-8">
+    <h2 class="text-xl font-semibold mb-4">{{ t().organizations }}</h2>
+    <div class="space-y-3">
+      <Card v-for="org in organizations" :key="org.id">
+        <CardHeader>
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <CardTitle class="text-sm flex items-center gap-2">
+                <Users class="size-4 text-primary" />
+                {{ org.name }}
+              </CardTitle>
+              <p class="text-xs text-muted-foreground mt-1">{{ org.position }}</p>
+            </div>
+            <div class="flex items-center gap-2 shrink-0">
+              <span class="text-xs text-muted-foreground">
+                <Calendar class="size-3 inline mr-1" />
+                {{ org.date_start }} — {{ org.date_end || t().ongoing }}
+              </span>
+              <Badge v-if="org.membership_ongoing" variant="default" class="text-xs">
+                {{ t().ongoing }}
+              </Badge>
+            </div>
+          </div>
+        </CardHeader>
+      </Card>
+    </div>
+  </section>
+</template>
