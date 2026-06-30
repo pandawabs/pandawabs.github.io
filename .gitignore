@@ -29,3 +29,5 @@ coverage
 *.sw?
 
 .commandcode
+.venv
+graphify-out
