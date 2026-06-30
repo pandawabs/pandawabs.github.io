@@ -61,20 +61,20 @@ Dark mode applied via `.dark` class on `<html>`.
 
 # Sections (all data-driven from CV JSON)
 
-1. **Hero/Cover** — gradient cover banner, profile picture (Avatar), full name, headline, location, current job
-2. **About** — summary paragraph, contact info (email + social profiles as icon links), birth info Card
-3. **Experience** — timeline Cards with company, title, dates, descriptions, skills Badges; Collapsible for long descriptions
-4. **Education** — timeline Cards with school, degree, field, dates, grade, activities
-5. **Skills** — aggregated unique skills across all experience, shown as Badge cloud grouped by experience
-6. **Licenses & Certifications** — grid Cards with name, org, dates, credential link
-7. **Organizations** — list Cards with org name, position, dates
-8. **Voluntary Works** — Cards with org, role, cause, dates
+1. **Profile** — gradient cover banner, profile picture (Avatar), full name, headline, location, current job, summary paragraph, contact info (email + social profiles as icon links), birth info
+1. **Profile** — gradient cover banner, profile picture, full name/headline/location/job, summary, contact info, birth info, skill categories (Badge cloud)
+
+2. **Experience** — timeline Cards with company, title, dates, descriptions, skills Badges
+3. **Education** — timeline Cards with school, degree, field, dates, grade, activities
+4. **Licenses & Certifications** — grid Cards with name, org, dates, credential link
+5. **Organizations** — list Cards with org name, position, dates
+6. **Voluntary Works** — Cards with org, role, cause, dates
 
 # Data Fetching & State Management
 
 ## Data Sources
-- EN: `https://gist.github.com/pandawabs/9d98240d06ce64162aebc93905798655/raw/466d0c961c0894f65c6ff8c5753fa16ebc679389/pandawabs-cv-en.json`
-- ID: `https://gist.github.com/pandawabs/9d98240d06ce64162aebc93905798655/raw/466d0c961c0894f65c6ff8c5753fa16ebc679389/pandawabs-cv-id.json`
+- EN: `https://gist.github.com/pandawabs/9d98240d06ce64162aebc93905798655/raw/cb800e3aefe9a03fddd9762e260c69933f5a5f23/pandawabs-cv-en.json`
+- ID: `https://gist.github.com/pandawabs/9d98240d06ce64162aebc93905798655/raw/cb800e3aefe9a03fddd9762e260c69933f5a5f23/pandawabs-cv-id.json`
 
 ## Caching Strategy
 - localStorage keys: `cv_data_en`, `cv_data_id`
@@ -162,11 +162,9 @@ pandawabs.github.io/
         │   ├── ErrorState.vue       # error icon + message + retry Button
         │   └── EmptyState.vue       # empty illustration + message
         └── sections/
-            ├── HeroBanner.vue       # gradient cover + centered Avatar + name/headline
-            ├── AboutSection.vue     # summary + contact icons + birth Card
-            ├── ExperienceSection.vue # timeline Cards with Collapsible
+            ├── ProfileSection.vue   # gradient cover + avatar + identity + summary + contact + birth + skills
+            ├── ExperienceSection.vue # timeline Cards
             ├── EducationSection.vue # timeline Cards
-            ├── SkillsSection.vue    # Badge cloud + Collapsible per experience
             ├── CertificationsSection.vue
             ├── OrganizationsSection.vue
             └── VolunteerSection.vue

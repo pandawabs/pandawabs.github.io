@@ -2,12 +2,10 @@
 import type { Experience } from '@/types/cv'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible'
 import { Separator } from '@/components/ui/separator'
-import { Button } from '@/components/ui/button'
 import { useLanguage } from '@/composables/useLanguage'
-import { computed, reactive } from 'vue'
-import { Building2, MapPin, ChevronDown, ChevronUp } from '@lucide/vue'
+import { computed } from 'vue'
+import { Building2, MapPin } from '@lucide/vue'
 import { formatDateRange } from '@/lib/date'
 
 const props = defineProps<{
@@ -15,12 +13,7 @@ const props = defineProps<{
 }>()
 
 const { t, lang } = useLanguage()
-const openItems = reactive<Record<number, boolean>>({ 1: true })
 const reverseOrderedExperiences = computed(() => props.experiences.slice().reverse())
-
-function toggle(id: number) {
-  openItems[id] = !openItems[id]
-}
 </script>
 
 <template>
@@ -50,19 +43,9 @@ function toggle(id: number) {
           </div>
         </CardHeader>
         <CardContent class="space-y-3">
-          <Collapsible v-model:open="openItems[exp.id]" as="div">
-            <CollapsibleContent class="space-y-2">
-              <ul class="prose prose-sm max-w-none dark:prose-invert list-disc list-inside space-y-1">
-                <li v-for="(desc, idx) in exp.descriptions" :key="idx">{{ desc }}</li>
-              </ul>
-            </CollapsibleContent>
-            <CollapsibleTrigger v-if="exp.descriptions.length > 1" as-child>
-              <Button variant="ghost" size="sm" class="mt-2" @click="toggle(exp.id)">
-                <component :is="openItems[exp.id] ? ChevronUp : ChevronDown" class="size-4" />
-                {{ openItems[exp.id] ? 'Less' : 'More' }}
-              </Button>
-            </CollapsibleTrigger>
-          </Collapsible>
+          <ul class="prose prose-sm max-w-none dark:prose-invert list-disc list-inside space-y-1">
+            <li v-for="(desc, idx) in exp.descriptions" :key="idx">{{ desc }}</li>
+          </ul>
           <Separator v-if="exp.skills.length" />
           <div class="flex flex-wrap gap-1.5">
             <Badge v-for="skill in exp.skills" :key="skill" variant="secondary" class="text-xs">

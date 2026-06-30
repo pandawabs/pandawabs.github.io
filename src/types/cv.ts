@@ -90,6 +90,11 @@ export interface VoluntaryWork {
   date_end: string
 }
 
+export interface HighlightSkill {
+  category: string
+  skills: string[]
+}
+
 export interface CvData {
   context: string
   language: string
@@ -97,6 +102,7 @@ export interface CvData {
   created_at: number
   updated_at: number
   profile: Profile
+  highlight_skills: HighlightSkill[]
   education: Education[]
   experience: Experience[]
   licenses_certifications: License[]
