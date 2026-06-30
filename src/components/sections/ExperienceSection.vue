@@ -6,15 +6,16 @@ import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/component
 import { Separator } from '@/components/ui/separator'
 import { Button } from '@/components/ui/button'
 import { useLanguage } from '@/composables/useLanguage'
-import { reactive } from 'vue'
+import { computed, reactive } from 'vue'
 import { Building2, MapPin, ChevronDown, ChevronUp } from '@lucide/vue'
 
-defineProps<{
+const props = defineProps<{
   experiences: Experience[]
 }>()
 
 const { t } = useLanguage()
 const openItems = reactive<Record<number, boolean>>({ 1: true })
+const reverseOrderedExperiences = computed(() => props.experiences.slice().reverse())
 
 function toggle(id: number) {
   openItems[id] = !openItems[id]
@@ -25,7 +26,7 @@ function toggle(id: number) {
   <section id="experience" class="max-w-5xl mx-auto px-4 py-8">
     <h2 class="text-xl font-semibold mb-4">{{ t().experience }}</h2>
     <div class="space-y-4">
-      <Card v-for="exp in experiences" :key="exp.id">
+      <Card v-for="exp in reverseOrderedExperiences" :key="exp.id">
         <CardHeader>
           <div class="flex items-start justify-between gap-4">
             <div>

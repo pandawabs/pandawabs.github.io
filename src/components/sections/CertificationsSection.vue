@@ -5,19 +5,21 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { useLanguage } from '@/composables/useLanguage'
 import { ExternalLink, Award, Calendar } from '@lucide/vue'
+import { computed } from 'vue'
 
-defineProps<{
+const props = defineProps<{
   licenses: License[]
 }>()
 
 const { t } = useLanguage()
+const reverseOrderedLicenses = computed(() => props.licenses.slice().reverse())
 </script>
 
 <template>
   <section id="certifications" class="max-w-5xl mx-auto px-4 py-8">
     <h2 class="text-xl font-semibold mb-4">{{ t().certifications }}</h2>
     <div class="grid gap-4 sm:grid-cols-2">
-      <Card v-for="lic in licenses" :key="lic.id">
+      <Card v-for="lic in reverseOrderedLicenses" :key="lic.id">
         <CardHeader>
           <CardTitle class="text-sm flex items-start gap-2">
             <Award class="size-4 mt-0.5 shrink-0 text-primary" />

@@ -4,19 +4,20 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge'
 import { useLanguage } from '@/composables/useLanguage'
 import { GraduationCap, Calendar } from '@lucide/vue'
+import { computed } from 'vue'
 
-defineProps<{
+const props = defineProps<{
   education: Education[]
 }>()
-
 const { t } = useLanguage()
+const reverseOrderedEducation = computed(() => props.education.slice().reverse())
 </script>
 
 <template>
   <section id="education" class="max-w-5xl mx-auto px-4 py-8">
     <h2 class="text-xl font-semibold mb-4">{{ t().education }}</h2>
     <div class="space-y-4">
-      <Card v-for="edu in education" :key="edu.id" :class="{ 'border-primary/50': edu.currently_studying }">
+      <Card v-for="edu in reverseOrderedEducation" :key="edu.id" :class="{ 'border-primary/50': edu.currently_studying }">
         <CardHeader>
           <div class="flex items-start justify-between gap-4">
             <div>

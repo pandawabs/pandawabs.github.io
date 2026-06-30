@@ -47,29 +47,5 @@ function toggle(id: number) {
         </div>
       </CardContent>
     </Card>
-
-    <div class="space-y-3">
-      <Card v-for="exp in experiences" :key="exp.id">
-        <CardHeader class="pb-2">
-          <div class="flex items-center justify-between">
-            <CardTitle class="text-sm font-medium">{{ exp.company }}</CardTitle>
-            <Button variant="ghost" size="icon-sm" @click="toggle(exp.id)">
-              <component :is="openItems[exp.id] ? ChevronUp : ChevronDown" class="size-4" />
-            </Button>
-          </div>
-        </CardHeader>
-        <Collapsible v-model:open="openItems[exp.id]" as="div">
-          <CollapsibleContent>
-            <CardContent>
-              <div class="flex flex-wrap gap-1">
-                <Badge v-for="skill in exp.skills" :key="skill" variant="secondary" class="text-xs">
-                  {{ skill }}
-                </Badge>
-              </div>
-            </CardContent>
-          </CollapsibleContent>
-        </Collapsible>
-      </Card>
-    </div>
   </section>
 </template>

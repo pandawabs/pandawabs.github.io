@@ -4,19 +4,21 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { useLanguage } from '@/composables/useLanguage'
 import { Users, Calendar } from '@lucide/vue'
+import { computed } from 'vue'
 
-defineProps<{
+const props = defineProps<{
   organizations: Organization[]
 }>()
 
 const { t } = useLanguage()
+const reverseOrderedOrganizations = computed(() => props.organizations.slice().reverse())
 </script>
 
 <template>
   <section id="organizations" class="max-w-5xl mx-auto px-4 py-8">
     <h2 class="text-xl font-semibold mb-4">{{ t().organizations }}</h2>
     <div class="space-y-3">
-      <Card v-for="org in organizations" :key="org.id">
+      <Card v-for="org in reverseOrderedOrganizations" :key="org.id">
         <CardHeader>
           <div class="flex items-start justify-between gap-4">
             <div>
