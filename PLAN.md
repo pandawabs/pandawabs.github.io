@@ -71,8 +71,8 @@ Dark mode applied via `.dark` class on `<html>`.
 # Data Fetching & State Management
 
 ## Data Sources
-- EN: `https://gist.github.com/pandawabs/9d98240d06ce64162aebc93905798655/raw/501ba6ae5e2b691eefc5de79d7d17165e6062760/pandawabs-cv-en.json`
-- ID: `https://gist.github.com/pandawabs/9d98240d06ce64162aebc93905798655/raw/501ba6ae5e2b691eefc5de79d7d17165e6062760/pandawabs-cv-id.json`
+- EN: `https://gist.github.com/pandawabs/9d98240d06ce64162aebc93905798655/raw/466d0c961c0894f65c6ff8c5753fa16ebc679389/pandawabs-cv-en.json`
+- ID: `https://gist.github.com/pandawabs/9d98240d06ce64162aebc93905798655/raw/466d0c961c0894f65c6ff8c5753fa16ebc679389/pandawabs-cv-id.json`
 
 ## Caching Strategy
 - localStorage keys: `cv_data_en`, `cv_data_id`

@@ -14,12 +14,12 @@ export default defineConfig({
   server: {
     proxy: {
       '/api/cv-en.json': {
-        target: 'https://gist.githubusercontent.com/pandawabs/9d98240d06ce64162aebc93905798655/raw/501ba6ae5e2b691eefc5de79d7d17165e6062760',
+        target: 'https://gist.githubusercontent.com/pandawabs/9d98240d06ce64162aebc93905798655/raw/466d0c961c0894f65c6ff8c5753fa16ebc679389',
         changeOrigin: true,
         rewrite: () => '/pandawabs-cv-en.json',
       },
       '/api/cv-id.json': {
-        target: 'https://gist.githubusercontent.com/pandawabs/9d98240d06ce64162aebc93905798655/raw/501ba6ae5e2b691eefc5de79d7d17165e6062760',
+        target: 'https://gist.githubusercontent.com/pandawabs/9d98240d06ce64162aebc93905798655/raw/466d0c961c0894f65c6ff8c5753fa16ebc679389',
         changeOrigin: true,
         rewrite: () => '/pandawabs-cv-id.json',
       },
