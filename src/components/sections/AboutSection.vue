@@ -5,6 +5,7 @@ import { Separator } from '@/components/ui/separator'
 import { useLanguage } from '@/composables/useLanguage'
 import { Mail, MapPin, Calendar, Globe } from '@lucide/vue'
 import { computed } from 'vue'
+import { formatBirthDate } from '@/lib/date'
 
 const props = defineProps<{
   profile: Profile
@@ -21,14 +22,7 @@ const socialIconMap: Record<string, string> = {
   WhatsApp: '💬',
 }
 
-const birthStr = computed(() => {
-  const d = new Date(props.profile.birth.date)
-  return d.toLocaleDateString(lang.value === 'id' ? 'id-ID' : 'en-US', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-  })
-})
+const birthStr = computed(() => formatBirthDate(props.profile.birth.date, lang.value))
 </script>
 
 <template>
@@ -40,7 +34,9 @@ const birthStr = computed(() => {
           <CardTitle>{{ t().about }}</CardTitle>
         </CardHeader>
         <CardContent class="space-y-4">
-          <p class="text-sm text-muted-foreground leading-relaxed">{{ profile.summary }}</p>
+          <div class="prose prose-sm max-w-none dark:prose-invert text-justify">
+            <p>{{ profile.summary }}</p>
+          </div>
           <Separator />
           <div class="space-y-2">
             <p class="text-sm font-medium">{{ t().contact }}</p>

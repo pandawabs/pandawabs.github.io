@@ -3,12 +3,13 @@ import type { VoluntaryWork } from '@/types/cv'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { useLanguage } from '@/composables/useLanguage'
 import { Heart, Calendar } from '@lucide/vue'
+import { formatDateRange } from '@/lib/date'
 
 defineProps<{
   volunteer: VoluntaryWork[]
 }>()
 
-const { t } = useLanguage()
+const { t, lang } = useLanguage()
 </script>
 
 <template>
@@ -27,7 +28,7 @@ const { t } = useLanguage()
           <p>{{ v.cause }}</p>
           <p>
             <Calendar class="size-3 inline mr-1" />
-            {{ v.date_start }} — {{ v.date_end || t().present }}
+            {{ formatDateRange(v.date_start, v.date_end, lang, v.currently_volunteering ? t().present : '') }}
           </p>
         </CardContent>
       </Card>

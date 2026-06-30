@@ -9,6 +9,8 @@ Create a complete, production-ready codebase for a single-page Personal CV websi
 - Vite
 - Vue.js 3 (Composition API)
 - Tailwind CSS v4
+- dayjs (datetime formatting, locale-aware display)
+- `@tailwindcss/typography` (prose styles)
 - shadcn-vue (Button, Card, Badge, Collapsible, Separator, Avatar, Skeleton)
 
 # Architecture & UI Requirements

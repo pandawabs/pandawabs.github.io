@@ -5,11 +5,12 @@ import { Badge } from '@/components/ui/badge'
 import { useLanguage } from '@/composables/useLanguage'
 import { GraduationCap, Calendar } from '@lucide/vue'
 import { computed } from 'vue'
+import { formatDateRange } from '@/lib/date'
 
 const props = defineProps<{
   education: Education[]
 }>()
-const { t } = useLanguage()
+const { t, lang } = useLanguage()
 const reverseOrderedEducation = computed(() => props.education.slice().reverse())
 </script>
 
@@ -29,7 +30,7 @@ const reverseOrderedEducation = computed(() => props.education.slice().reverse()
             </div>
             <Badge variant="outline" class="shrink-0 text-xs">
               <Calendar class="size-3 mr-1" />
-              {{ edu.date_start }} — {{ edu.date_end }}
+              {{ formatDateRange(edu.date_start, edu.date_end, lang, edu.currently_studying ? t().present : '') }}
             </Badge>
           </div>
         </CardHeader>

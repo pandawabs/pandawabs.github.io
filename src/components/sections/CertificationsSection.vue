@@ -6,12 +6,13 @@ import { Button } from '@/components/ui/button'
 import { useLanguage } from '@/composables/useLanguage'
 import { ExternalLink, Award, Calendar } from '@lucide/vue'
 import { computed } from 'vue'
+import { formatDate, formatDateRange } from '@/lib/date'
 
 const props = defineProps<{
   licenses: License[]
 }>()
 
-const { t } = useLanguage()
+const { t, lang } = useLanguage()
 const reverseOrderedLicenses = computed(() => props.licenses.slice().reverse())
 </script>
 
@@ -30,8 +31,8 @@ const reverseOrderedLicenses = computed(() => props.licenses.slice().reverse())
         <CardContent class="space-y-3">
           <div class="flex items-center gap-2 text-xs text-muted-foreground">
             <Calendar class="size-3" />
-            {{ lic.date_issue }}
-            <span v-if="lic.date_expire"> — {{ lic.date_expire }}</span>
+            {{ formatDate(lic.date_issue, lang) }}
+            <span v-if="lic.date_expire"> — {{ formatDate(lic.date_expire, lang) }}</span>
           </div>
           <Badge variant="outline" class="text-xs">ID: {{ lic.credential_id }}</Badge>
           <a

@@ -8,12 +8,13 @@ import { Button } from '@/components/ui/button'
 import { useLanguage } from '@/composables/useLanguage'
 import { computed, reactive } from 'vue'
 import { Building2, MapPin, ChevronDown, ChevronUp } from '@lucide/vue'
+import { formatDateRange } from '@/lib/date'
 
 const props = defineProps<{
   experiences: Experience[]
 }>()
 
-const { t } = useLanguage()
+const { t, lang } = useLanguage()
 const openItems = reactive<Record<number, boolean>>({ 1: true })
 const reverseOrderedExperiences = computed(() => props.experiences.slice().reverse())
 
@@ -37,7 +38,7 @@ function toggle(id: number) {
               </CardDescription>
             </div>
             <Badge variant="outline" class="shrink-0 text-xs">
-              {{ exp.date_start }} — {{ exp.date_end || (exp.currently_working ? t().present : '') }}
+              {{ formatDateRange(exp.date_start, exp.date_end, lang, exp.currently_working ? t().present : '') }}
             </Badge>
           </div>
           <div class="flex flex-wrap gap-3 text-xs text-muted-foreground">
@@ -51,7 +52,7 @@ function toggle(id: number) {
         <CardContent class="space-y-3">
           <Collapsible v-model:open="openItems[exp.id]" as="div">
             <CollapsibleContent class="space-y-2">
-              <ul class="list-disc list-inside space-y-1 text-sm text-muted-foreground">
+              <ul class="prose prose-sm max-w-none dark:prose-invert list-disc list-inside space-y-1">
                 <li v-for="(desc, idx) in exp.descriptions" :key="idx">{{ desc }}</li>
               </ul>
             </CollapsibleContent>

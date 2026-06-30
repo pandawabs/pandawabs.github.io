@@ -5,12 +5,13 @@ import { Badge } from '@/components/ui/badge'
 import { useLanguage } from '@/composables/useLanguage'
 import { Users, Calendar } from '@lucide/vue'
 import { computed } from 'vue'
+import { formatDateRange } from '@/lib/date'
 
 const props = defineProps<{
   organizations: Organization[]
 }>()
 
-const { t } = useLanguage()
+const { t, lang } = useLanguage()
 const reverseOrderedOrganizations = computed(() => props.organizations.slice().reverse())
 </script>
 
@@ -31,11 +32,8 @@ const reverseOrderedOrganizations = computed(() => props.organizations.slice().r
             <div class="flex items-center gap-2 shrink-0">
               <span class="text-xs text-muted-foreground">
                 <Calendar class="size-3 inline mr-1" />
-                {{ org.date_start }} — {{ org.date_end || t().ongoing }}
+                {{ formatDateRange(org.date_start, org.date_end || '', lang, org.membership_ongoing ? t().ongoing : '') }}
               </span>
-              <Badge v-if="org.membership_ongoing" variant="default" class="text-xs">
-                {{ t().ongoing }}
-              </Badge>
             </div>
           </div>
         </CardHeader>
