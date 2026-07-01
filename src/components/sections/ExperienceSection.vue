@@ -19,7 +19,7 @@ const reverseOrderedExperiences = computed(() => props.experiences.slice().rever
 <template>
   <section id="experience" class="max-w-5xl mx-auto px-4 py-8">
     <h2 class="text-xl font-semibold mb-4">{{ t().experience }}</h2>
-    <div class="space-y-4">
+    <div class="space-y-3 sm:space-y-4">
       <Card v-for="exp in reverseOrderedExperiences" :key="exp.id">
         <CardHeader>
           <div class="flex items-start justify-between gap-4">
@@ -44,7 +44,7 @@ const reverseOrderedExperiences = computed(() => props.experiences.slice().rever
         </CardHeader>
         <CardContent class="space-y-3">
           <ul class="prose prose-sm max-w-none dark:prose-invert list-disc list-inside space-y-1">
-            <li v-for="(desc, idx) in exp.descriptions" :key="idx">{{ desc }}</li>
+            <li v-for="(desc, idx) in exp.descriptions" :key="idx" class="prose-li">{{ desc }}</li>
           </ul>
           <Separator v-if="exp.skills.length" />
           <div class="flex flex-wrap gap-1.5">

@@ -17,7 +17,7 @@ const reverseOrderedEducation = computed(() => props.education.slice().reverse()
 <template>
   <section id="education" class="max-w-5xl mx-auto px-4 py-8">
     <h2 class="text-xl font-semibold mb-4">{{ t().education }}</h2>
-    <div class="space-y-4">
+    <div class="space-y-3 sm:space-y-4">
       <Card v-for="edu in reverseOrderedEducation" :key="edu.id" :class="{ 'border-primary/50': edu.currently_studying }">
         <CardHeader>
           <div class="flex items-start justify-between gap-4">

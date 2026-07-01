@@ -26,11 +26,11 @@ const socialIconMap: Record<string, string> = {
 
 <template>
   <section id="profile">
-    <div class="h-48 bg-gradient-to-r from-primary/80 via-secondary/60 to-accent/70" />
+    <div class="h-28 sm:h-48 bg-linear-to-r from-primary/80 via-secondary/60 to-accent/70" />
 
-    <div class="max-w-5xl mx-auto px-4 -mt-16 pb-8">
+    <div class="max-w-5xl mx-auto px-4 -mt-12 sm:-mt-16 pb-8">
       <div class="flex flex-col items-center text-center space-y-3">
-        <Avatar class="size-32 border-4 border-background shadow-md">
+        <Avatar class="size-20 sm:size-32 border-4 border-background shadow-md">
           <AvatarImage :src="profile.profile_picture_url" :alt="profile.first_name" />
           <AvatarFallback class="text-2xl">{{ profile.nickname[0] }}</AvatarFallback>
         </Avatar>
@@ -62,8 +62,8 @@ const socialIconMap: Record<string, string> = {
         </div>
       </div>
 
-      <div class="grid gap-4 sm:grid-cols-2 max-w-3xl mx-auto">
-        <div class="rounded-lg border bg-card p-4 space-y-3">
+      <div class="grid gap-3 sm:gap-4 sm:grid-cols-2 max-w-3xl mx-auto">
+        <div class="rounded-lg border bg-card p-3 sm:p-4 space-y-3">
           <p class="text-sm font-medium">{{ t().contact }}</p>
           <a
             :href="`mailto:${profile.contact.email}`"
@@ -86,7 +86,7 @@ const socialIconMap: Record<string, string> = {
           </div>
         </div>
 
-        <div class="rounded-lg border bg-card p-4 space-y-2 text-sm">
+        <div class="rounded-lg border bg-card p-3 sm:p-4 space-y-2 text-sm">
           <p class="text-sm font-medium">{{ t().birth }}</p>
           <div class="flex items-center gap-2 text-muted-foreground">
             <Calendar class="size-4 shrink-0" />
@@ -103,7 +103,7 @@ const socialIconMap: Record<string, string> = {
         </div>
       </div>
 
-      <div class="rounded-lg border bg-card p-4 space-y-4 max-w-3xl mt-4 mx-auto">
+      <div class="rounded-lg border bg-card p-3 sm:p-4 space-y-4 max-w-3xl mt-4 mx-auto">
         <p class="text-sm font-medium">{{ t().skills }}</p>
         <div v-for="group in highlightSkills" :key="group.category" class="space-y-1.5">
           <p class="text-xs font-medium text-muted-foreground">{{ group.category }}</p>
