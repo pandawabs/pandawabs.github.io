@@ -64,11 +64,11 @@ Dark mode applied via `.dark` class on `<html>`.
 1. **Profile** — gradient cover banner, profile picture (Avatar), full name, headline, location, current job, summary paragraph, contact info (email + social profiles as icon links), birth info
 1. **Profile** — gradient cover banner, profile picture, full name/headline/location/job, summary, contact info, birth info, skill categories (Badge cloud)
 
-2. **Experience** — timeline Cards with company, title, dates, descriptions, skills Badges
-3. **Education** — timeline Cards with school, degree, field, dates, grade, activities
-4. **Licenses & Certifications** — grid Cards with name, org, dates, credential link
-5. **Organizations** — list Cards with org name, position, dates
-6. **Voluntary Works** — Cards with org, role, cause, dates
+2. **Timeline** — horizontal scrollable timeline merging Experience + Education, sorted by date desc, dot connectors, cards with descriptions/skills/activities
+
+3. **Licenses & Certifications** — grid Cards with name, org, dates, credential link
+4. **Organizations** — list Cards with org name, position, dates
+5. **Voluntary Works** — Cards with org, role, cause, dates
 
 # Data Fetching & State Management
 
@@ -163,8 +163,7 @@ pandawabs.github.io/
         │   └── EmptyState.vue       # empty illustration + message
         └── sections/
             ├── ProfileSection.vue   # gradient cover + avatar + identity + summary + contact + birth + skills
-            ├── ExperienceSection.vue # timeline Cards
-            ├── EducationSection.vue # timeline Cards
+            ├── TimelineSection.vue # horizontal scrollable timeline (experience + education)
             ├── CertificationsSection.vue
             ├── OrganizationsSection.vue
             └── VolunteerSection.vue

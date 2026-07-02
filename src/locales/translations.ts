@@ -1,5 +1,6 @@
 export interface SectionLabels {
   about: string
+  timeline: string
   experience: string
   education: string
   skills: string
@@ -25,6 +26,7 @@ export interface SectionLabels {
 
 export const en: SectionLabels = {
   about: 'About',
+  timeline: 'Timeline',
   experience: 'Experience',
   education: 'Education',
   skills: 'Top Skills',
@@ -35,8 +37,8 @@ export const en: SectionLabels = {
   location: 'Location',
   email: 'Email',
   birth: 'Birth',
-  currentlyWorking: 'Currently working here',
-  currentlyStudying: 'Currently studying here',
+  currentlyWorking: 'Current',
+  currentlyStudying: 'Current',
   viewCredential: 'View Credential',
   noData: 'No data available',
   loading: 'Loading...',
@@ -50,6 +52,7 @@ export const en: SectionLabels = {
 
 export const id: SectionLabels = {
   about: 'Tentang',
+  timeline: 'Linimasa',
   experience: 'Pengalaman',
   education: 'Pendidikan',
   skills: 'Keahlian Unggulan',
@@ -60,8 +63,8 @@ export const id: SectionLabels = {
   location: 'Lokasi',
   email: 'Surel',
   birth: 'Kelahiran',
-  currentlyWorking: 'Saat ini bekerja di sini',
-  currentlyStudying: 'Saat ini menempuh pendidikan di sini',
+  currentlyWorking: 'Saat ini',
+  currentlyStudying: 'Saat ini',
   viewCredential: 'Lihat Kredensial',
   noData: 'Tidak ada data',
   loading: 'Memuat...',

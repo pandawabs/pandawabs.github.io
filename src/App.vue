@@ -7,8 +7,7 @@ import AppFooter from '@/components/layout/AppFooter.vue'
 import LoadingSkeleton from '@/components/ui-custom/LoadingSkeleton.vue'
 import ErrorState from '@/components/ui-custom/ErrorState.vue'
 import ProfileSection from '@/components/sections/ProfileSection.vue'
-import ExperienceSection from '@/components/sections/ExperienceSection.vue'
-import EducationSection from '@/components/sections/EducationSection.vue'
+import TimelineSection from '@/components/sections/TimelineSection.vue'
 import CertificationsSection from '@/components/sections/CertificationsSection.vue'
 import OrganizationsSection from '@/components/sections/OrganizationsSection.vue'
 import VolunteerSection from '@/components/sections/VolunteerSection.vue'
@@ -33,9 +32,7 @@ const { data, status, error, refetch } = useCvData(lang)
     <template v-else-if="data">
       <ProfileSection :profile="data.profile" :highlight-skills="data.highlight_skills" />
       <Separator class="max-w-5xl mx-auto" />
-      <ExperienceSection :experiences="data.experience" />
-      <Separator class="max-w-5xl mx-auto" />
-      <EducationSection :education="data.education" />
+      <TimelineSection :experiences="data.experience" :education="data.education" />
       <Separator class="max-w-5xl mx-auto" />
       <CertificationsSection :licenses="data.licenses_certifications" />
       <Separator class="max-w-5xl mx-auto" />
