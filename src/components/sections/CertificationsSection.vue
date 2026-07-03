@@ -20,7 +20,18 @@ const reverseOrderedLicenses = computed(() => props.licenses.slice().reverse())
   <div class="flex flex-col gap-3 sm:gap-4">
     <Card v-for="lic in reverseOrderedLicenses" :key="lic.id">
       <CardHeader>
-        <CardTitle class="text-sm">{{ lic.name }}</CardTitle>
+        <CardTitle class="text-sm">
+          <a
+            v-if="lic.credential_url"
+            :href="lic.credential_url"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hover:underline inline-flex items-center gap-1"
+          >
+            {{ lic.name }} <ExternalLink class="size-3 shrink-0" />
+          </a>
+          <template v-else>{{ lic.name }}</template>
+        </CardTitle>
         <p class="text-xs text-muted-foreground">{{ lic.organization }}</p>
       </CardHeader>
       <CardContent class="space-y-3">
@@ -29,19 +40,7 @@ const reverseOrderedLicenses = computed(() => props.licenses.slice().reverse())
           {{ formatDate(lic.date_issue, lang) }}
           <span v-if="lic.date_expire"> — {{ formatDate(lic.date_expire, lang) }}</span>
         </div>
-        <Badge variant="outline" class="text-xs">ID: {{ lic.credential_id }}</Badge>
-        <a
-          v-if="lic.credential_url"
-          :href="lic.credential_url"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="block"
-        >
-          <Button variant="outline" size="sm" class="w-full text-xs gap-1">
-            <ExternalLink class="size-3" />
-            {{ t().viewCredential }}
-          </Button>
-        </a>
+        <div class="text-xs">ID: {{ lic.credential_id }}</div>
       </CardContent>
     </Card>
   </div>
