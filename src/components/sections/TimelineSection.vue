@@ -279,8 +279,8 @@ const combinedTimeline = computed<TimelineItem[]>(() => {
             </div>
             <p v-else class="prose prose-sm dark:prose-invert text-justify max-w-none space-y-1">
               <ul>
-                <li v-for="(desc, di) in selectedItem.skills" :key="skill" class="prose-li">
-                  {{ desc }}
+                <li v-for="skill in selectedItem.skills" :key="skill" class="prose-li">
+                  {{ skill }}
                 </li>
               </ul>
             </p>
