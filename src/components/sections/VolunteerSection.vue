@@ -2,7 +2,7 @@
 import type { VoluntaryWork } from '@/types/cv'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { useLanguage } from '@/composables/useLanguage'
-import { Heart, Calendar } from '@lucide/vue'
+import { Calendar } from '@lucide/vue'
 import { formatDateRange } from '@/lib/date'
 
 defineProps<{
@@ -13,25 +13,19 @@ const { t, lang } = useLanguage()
 </script>
 
 <template>
-  <section id="volunteer">
-    <h2 class="text-xl font-semibold mb-4">{{ t().volunteer }}</h2>
-    <div class="flex flex-col-reverse gap-4">
-      <Card v-for="v in volunteer" :key="v.id">
-        <CardHeader>
-          <CardTitle class="text-sm flex items-center gap-2">
-            <Heart class="size-4 text-secondary" />
-            {{ v.organization }}
-          </CardTitle>
-          <p class="text-xs text-muted-foreground">{{ v.role }}</p>
-        </CardHeader>
-        <CardContent class="space-y-2 text-xs text-muted-foreground">
-          <p>{{ v.cause }}</p>
-          <p>
-            <Calendar class="size-3 inline mr-1" />
-            {{ formatDateRange(v.date_start, v.date_end, lang, v.currently_volunteering ? t().present : '') }}
-          </p>
-        </CardContent>
-      </Card>
-    </div>
-  </section>
+  <div class="flex flex-col-reverse gap-4">
+    <Card v-for="v in volunteer" :key="v.id">
+      <CardHeader>
+        <CardTitle class="text-sm">{{ v.organization }}</CardTitle>
+        <p class="text-xs text-muted-foreground">{{ v.role }}</p>
+      </CardHeader>
+      <CardContent class="space-y-2 text-xs text-muted-foreground">
+        <p>{{ v.cause }}</p>
+        <p>
+          <Calendar class="size-3 inline mr-1" />
+          {{ formatDateRange(v.date_start, v.date_end, lang, v.currently_volunteering ? t().present : '') }}
+        </p>
+      </CardContent>
+    </Card>
+  </div>
 </template>

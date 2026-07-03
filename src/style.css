@@ -170,7 +170,7 @@
 }
 
 #head-logo > path {
-  
+
   animation: dash 1.15s linear forwards;
   animation-delay: .35s;
   stroke-dasharray: 1000;

@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { computed } from 'vue'
 import { useLanguage } from '@/composables/useLanguage'
 import { useCvData } from '@/composables/useCvData'
 import AppHeader from '@/components/layout/AppHeader.vue'
@@ -11,9 +10,16 @@ import TimelineSection from '@/components/sections/TimelineSection.vue'
 import CertificationsSection from '@/components/sections/CertificationsSection.vue'
 import OrganizationsSection from '@/components/sections/OrganizationsSection.vue'
 import VolunteerSection from '@/components/sections/VolunteerSection.vue'
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion'
 import { Separator } from '@/components/ui/separator'
+import { Award, Users, Heart } from '@lucide/vue'
 
-const { lang } = useLanguage()
+const { t, lang } = useLanguage()
 const { data, status, error, refetch } = useCvData(lang)
 </script>
 
@@ -34,13 +40,46 @@ const { data, status, error, refetch } = useCvData(lang)
       <Separator class="max-w-5xl mx-auto" />
       <TimelineSection :experiences="data.experience" :education="data.education" />
       <Separator class="max-w-5xl mx-auto" />
-      <div class="max-w-5xl mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-1 gap-3 sm:gap-4">
-        <CertificationsSection class="lg:row-span-2 overflow-y-auto" :licenses="data.licenses_certifications" />
-        <div class="lg:col-start-2 lg:row-start-1 flex flex-col gap-4 sm:gap-5">
-          <OrganizationsSection  :organizations="data.organizations" />
-          <VolunteerSection :volunteer="data.voluntary_works" />
-        </div>
-      </div>
+
+      <section class="max-w-5xl mx-auto px-4 py-8">
+        <Accordion type="single" collapsible class="border rounded-lg">
+          <AccordionItem value="certifications" class="border-b px-4">
+            <AccordionTrigger>
+              <div class="flex items-center gap-2 text-lg font-semibold">
+                <Award class="size-5 shrink-0 text-primary" />
+                <span>{{ t().certifications }}</span>
+              </div>
+            </AccordionTrigger>
+            <AccordionContent class="pb-4">
+              <CertificationsSection :licenses="data.licenses_certifications" />
+            </AccordionContent>
+          </AccordionItem>
+
+          <AccordionItem value="organizations" class="border-b px-4">
+            <AccordionTrigger>
+              <div class="flex items-center gap-2 text-lg font-semibold">
+                <Users class="size-5 shrink-0 text-primary" />
+                <span>{{ t().organizations }}</span>
+              </div>
+            </AccordionTrigger>
+            <AccordionContent class="pb-4">
+              <OrganizationsSection :organizations="data.organizations" />
+            </AccordionContent>
+          </AccordionItem>
+
+          <AccordionItem value="volunteer" class="px-4">
+            <AccordionTrigger>
+              <div class="flex items-center gap-2 text-lg font-semibold">
+                <Heart class="size-5 shrink-0 text-secondary" />
+                <span>{{ t().volunteer }}</span>
+              </div>
+            </AccordionTrigger>
+            <AccordionContent class="pb-4">
+              <VolunteerSection :volunteer="data.voluntary_works" />
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
+      </section>
     </template>
   </main>
 
