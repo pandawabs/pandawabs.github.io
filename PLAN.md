@@ -65,10 +65,7 @@ Dark mode applied via `.dark` class on `<html>`.
 1. **Profile** — gradient cover banner, profile picture, full name/headline/location/job, summary, contact info, birth info, skill categories (Badge cloud)
 
 2. **Timeline** — horizontal scrollable timeline merging Experience + Education, sorted by date desc, dot connectors, cards with descriptions/skills/activities
-
-3. **Licenses & Certifications** — grid Cards with name, org, dates, credential link
-4. **Organizations** — list Cards with org name, position, dates
-5. **Voluntary Works** — Cards with org, role, cause, dates
+3. **Bento Grid** — 2-col/2-row layout (1-col mobile): Certifications (left, row-span 2), Organizations (top-right), Volunteer (bottom-right)
 
 # Data Fetching & State Management
 

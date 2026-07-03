@@ -16,7 +16,7 @@ const reverseOrderedOrganizations = computed(() => props.organizations.slice().r
 </script>
 
 <template>
-  <section id="organizations" class="max-w-5xl mx-auto px-4 py-8">
+  <section id="organizations">
     <h2 class="text-xl font-semibold mb-4">{{ t().organizations }}</h2>
     <div class="space-y-3">
       <Card v-for="org in reverseOrderedOrganizations" :key="org.id">

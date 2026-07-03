@@ -17,9 +17,9 @@ const reverseOrderedLicenses = computed(() => props.licenses.slice().reverse())
 </script>
 
 <template>
-  <section id="certifications" class="max-w-5xl mx-auto px-4 py-8">
+  <section id="certifications">
     <h2 class="text-xl font-semibold mb-4">{{ t().certifications }}</h2>
-    <div class="grid gap-3 sm:gap-4 grid-cols-1 sm:grid-cols-2">
+    <div class="flex flex-col gap-3 sm:gap-4">
       <Card v-for="lic in reverseOrderedLicenses" :key="lic.id">
         <CardHeader>
           <CardTitle class="text-sm flex items-start gap-2">

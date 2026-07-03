@@ -34,11 +34,13 @@ const { data, status, error, refetch } = useCvData(lang)
       <Separator class="max-w-5xl mx-auto" />
       <TimelineSection :experiences="data.experience" :education="data.education" />
       <Separator class="max-w-5xl mx-auto" />
-      <CertificationsSection :licenses="data.licenses_certifications" />
-      <Separator class="max-w-5xl mx-auto" />
-      <OrganizationsSection :organizations="data.organizations" />
-      <Separator class="max-w-5xl mx-auto" />
-      <VolunteerSection :volunteer="data.voluntary_works" />
+      <div class="max-w-5xl mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-1 gap-3 sm:gap-4">
+        <CertificationsSection class="lg:row-span-2 overflow-y-auto" :licenses="data.licenses_certifications" />
+        <div class="lg:col-start-2 lg:row-start-1 flex flex-col gap-4 sm:gap-5">
+          <OrganizationsSection  :organizations="data.organizations" />
+          <VolunteerSection :volunteer="data.voluntary_works" />
+        </div>
+      </div>
     </template>
   </main>
 

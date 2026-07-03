@@ -13,9 +13,9 @@ const { t, lang } = useLanguage()
 </script>
 
 <template>
-  <section id="volunteer" class="max-w-5xl mx-auto px-4 py-8">
+  <section id="volunteer">
     <h2 class="text-xl font-semibold mb-4">{{ t().volunteer }}</h2>
-    <div class="grid gap-4 sm:grid-cols-2">
+    <div class="flex flex-col-reverse gap-4">
       <Card v-for="v in volunteer" :key="v.id">
         <CardHeader>
           <CardTitle class="text-sm flex items-center gap-2">
