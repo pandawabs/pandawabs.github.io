@@ -3,9 +3,16 @@ import ThemeToggle from "@/components/ui-custom/ThemeToggle.vue";
 import LanguageSwitcher from "@/components/ui-custom/LanguageSwitcher.vue";
 import { useLanguage } from "@/composables/useLanguage";
 import { useTheme } from '@/composables/useTheme'
+import { Download } from '@lucide/vue'
+import { Button } from '@/components/ui/button'
 
-const { t } = useLanguage();
+const { lang, t } = useLanguage();
 const { theme } = useTheme()
+
+const pdfFiles: Record<string, string> = {
+  en: '/Pandawa Bagus Sudewa Resume - 2026.pdf',
+  id: '/Pandawa Bagus Sudewa Resume (Bahasa Indonesia) - 2026.pdf',
+}
 </script>
 
 <template>
@@ -30,6 +37,17 @@ const { theme } = useTheme()
         </svg>
       </a>
       <div class="flex items-center gap-3">
+        <Button
+          variant="outline"
+          size="sm"
+          :title="t().downloadResume"
+          as-child
+        >
+          <a :href="pdfFiles[lang]" download>
+            <Download class="size-4" />
+            <span class="hidden sm:inline">{{ t().downloadResume }}</span>
+          </a>
+        </Button>
         <LanguageSwitcher />
         <ThemeToggle />
       </div>
