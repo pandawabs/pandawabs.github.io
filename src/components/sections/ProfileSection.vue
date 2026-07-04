@@ -6,6 +6,13 @@ import { Separator } from '@/components/ui/separator'
 import { useLanguage } from '@/composables/useLanguage'
 import { MapPin, Briefcase, Mail, Calendar, Globe } from '@lucide/vue'
 import { formatBirthDate } from '@/lib/date'
+import LinkedInIcon from '@/components/icons/LinkedInIcon.vue'
+import InstagramIcon from '@/components/icons/InstagramIcon.vue'
+import FacebookIcon from '@/components/icons/FacebookIcon.vue'
+import GitHubIcon from '@/components/icons/GitHubIcon.vue'
+import MediumIcon from '@/components/icons/MediumIcon.vue'
+import WhatsAppIcon from '@/components/icons/WhatsAppIcon.vue'
+import { type Component } from 'vue'
 
 defineProps<{
   profile: Profile
@@ -14,13 +21,13 @@ defineProps<{
 
 const { t, lang } = useLanguage()
 
-const socialIconMap: Record<string, string> = {
-  LinkedIn: '🔗',
-  Instagram: '📷',
-  Facebook: '👤',
-  GitHub: '💻',
-  Medium: '📝',
-  WhatsApp: '💬',
+const socialIconMap: Record<string, Component> = {
+  LinkedIn: LinkedInIcon,
+  Instagram: InstagramIcon,
+  Facebook: FacebookIcon,
+  GitHub: GitHubIcon,
+  Medium: MediumIcon,
+  WhatsApp: WhatsAppIcon,
 }
 </script>
 
@@ -81,7 +88,8 @@ const socialIconMap: Record<string, string> = {
               rel="noopener noreferrer"
               class="inline-flex items-center gap-1 text-xs px-2 py-1 rounded-md bg-muted hover:bg-accent transition-colors"
             >
-              {{ socialIconMap[sp.label] || '🔗' }} {{ sp.label }}
+              <component :is="socialIconMap[sp.label]" :size="16" class="shrink-0" />
+              {{ sp.label }}
             </a>
           </div>
         </div>
