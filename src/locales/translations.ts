@@ -23,6 +23,7 @@ export interface SectionLabels {
   siteTitle: string
   footerText: string
   downloadResume: string
+  latestUpdate: string
 }
 
 export const en: SectionLabels = {
@@ -50,6 +51,7 @@ export const en: SectionLabels = {
   siteTitle: 'Pandawa Bagus Sudewa — CV',
   footerText: 'Pandawa Bagus Sudewa. All rights reserved.',
   downloadResume: 'Download CV',
+  latestUpdate: 'Latest update',
 }
 
 export const id: SectionLabels = {
@@ -77,4 +79,5 @@ export const id: SectionLabels = {
   siteTitle: 'Pandawa Bagus Sudewa — CV',
   footerText: 'Pandawa Bagus Sudewa. Hak cipta dilindungi.',
   downloadResume: 'Unduh CV',
+  latestUpdate: 'Pembaruan terakhir',
 }

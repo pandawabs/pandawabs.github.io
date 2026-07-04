@@ -83,5 +83,5 @@ const { data, status, error, refetch } = useCvData(lang)
     </template>
   </main>
 
-  <AppFooter />
+  <AppFooter :version="data?.version ?? ''" :updated-at="data?.updated_at ?? 0" />
 </template>

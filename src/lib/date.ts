@@ -1,6 +1,8 @@
 import dayjs from "dayjs";
+import relativeTime from 'dayjs/plugin/relativeTime';
 import type { CvData } from "@/types/cv";
 
+dayjs.extend(relativeTime);
 dayjs.locale("id", {
   name: "id",
   weekdays: "Minggu_Senin_Selasa_Rabu_Kamis_Jumat_Sabtu".split("_"),
@@ -20,6 +22,21 @@ dayjs.locale("id", {
     LLL: "D MMMM YYYY [pukul] HH.mm",
     LLLL: "dddd, D MMMM YYYY [pukul] HH.mm",
   },
+  relativeTime: {
+    future: "dalam %s",
+    past: "%s yang lalu",
+    s: 'beberapa saat',
+    m: "satu menit",
+    mm: "%d menit",
+    h: "satu jam",
+    hh: "%d jam",
+    d: "satu hari",
+    dd: "%d hari",
+    M: "satu bulan",
+    MM: "%d bulan",
+    y: "satu tahun",
+    yy: "%d tahun"
+  }
 });
 
 export function formatDate(dateStr: string, locale: "en" | "id"): string {
