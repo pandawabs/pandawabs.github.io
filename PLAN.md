@@ -61,11 +61,11 @@ Dark mode applied via `.dark` class on `<html>`.
 
 # Sections (all data-driven from CV JSON)
 
-1. **Profile** — gradient cover banner, profile picture (Avatar), full name, headline, location, current job, summary paragraph, contact info (email + social profiles as icon links), birth info
-1. **Profile** — gradient cover banner, profile picture, full name/headline/location/job, summary, contact info, birth info, skill categories (Badge cloud)
-
+1. **Profile** — gradient cover banner, profile picture (Avatar), full name, headline, location, current job, summary paragraph, about card (birth, nationality, email). Social profiles moved to footer.
 2. **Timeline** — horizontal scrollable timeline merging Experience + Education, sorted by date desc, dot connectors, cards with descriptions/skills/activities
-3. **Accordion Sections** — single-column layout with shared Accordion wrapping Certifications, Organizations, and Volunteer sections. Each section is one accordion item; expanded content shows item list in Card format. Accordion uses visible border styling.
+3. **Skills** — standalone section with category-grouped Badge cloud, placed between Timeline and Accordion
+4. **Accordion Sections** — single-column layout with shared Accordion wrapping Certifications, Organizations, and Volunteer sections. Each section is one accordion item; expanded content shows item list in Card format. Accordion uses visible border styling.
+5. **Footer** — copyright, version, last update timestamp, social profile icons (icon-only with tooltip)
 
 # Data Fetching & State Management
 
@@ -160,8 +160,9 @@ pandawabs.github.io/
         │   ├── ErrorState.vue       # error icon + message + retry Button
         │   └── EmptyState.vue       # empty illustration + message
         └── sections/
-            ├── ProfileSection.vue   # gradient cover + avatar + identity + summary + contact + birth + skills
+            ├── ProfileSection.vue   # gradient cover + avatar + identity + summary + about card
             ├── TimelineSection.vue # horizontal scrollable timeline (experience + education)
+            ├── SkillsSection.vue   # category-grouped Badge cloud
             ├── CertificationsSection.vue
             ├── OrganizationsSection.vue
             └── VolunteerSection.vue
