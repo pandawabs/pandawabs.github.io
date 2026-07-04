@@ -48,7 +48,7 @@ export const en: SectionLabels = {
   present: 'Present',
   ongoing: 'Ongoing',
   siteTitle: 'Pandawa Bagus Sudewa — CV',
-  footerText: '© 2026 Pandawa Bagus Sudewa. All rights reserved.',
+  footerText: 'Pandawa Bagus Sudewa. All rights reserved.',
   downloadResume: 'Download CV',
 }
 
@@ -75,6 +75,6 @@ export const id: SectionLabels = {
   present: 'Sekarang',
   ongoing: 'Berlangsung',
   siteTitle: 'Pandawa Bagus Sudewa — CV',
-  footerText: '© 2026 Pandawa Bagus Sudewa. Hak cipta dilindungi.',
+  footerText: 'Pandawa Bagus Sudewa. Hak cipta dilindungi.',
   downloadResume: 'Unduh CV',
 }

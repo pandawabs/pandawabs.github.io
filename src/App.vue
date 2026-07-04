@@ -70,7 +70,7 @@ const { data, status, error, refetch } = useCvData(lang)
           <AccordionItem value="volunteer" class="px-4">
             <AccordionTrigger>
               <div class="flex items-center gap-2 text-lg font-semibold">
-                <Heart class="size-5 shrink-0 text-secondary" />
+                <Heart class="size-5 shrink-0 text-primary" />
                 <span>{{ t().volunteer }}</span>
               </div>
             </AccordionTrigger>

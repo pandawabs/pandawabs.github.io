@@ -13,7 +13,7 @@ const { t, lang } = useLanguage()
 </script>
 
 <template>
-  <div class="flex flex-col-reverse gap-4">
+  <div class="space-y-3">
     <Card v-for="v in volunteer" :key="v.id">
       <CardHeader>
         <CardTitle class="text-sm">{{ v.organization }}</CardTitle>
