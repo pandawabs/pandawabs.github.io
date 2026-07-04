@@ -10,6 +10,7 @@ import TimelineSection from '@/components/sections/TimelineSection.vue'
 import CertificationsSection from '@/components/sections/CertificationsSection.vue'
 import OrganizationsSection from '@/components/sections/OrganizationsSection.vue'
 import VolunteerSection from '@/components/sections/VolunteerSection.vue'
+import SkillsSection from '@/components/sections/SkillsSection.vue'
 import {
   Accordion,
   AccordionContent,
@@ -36,10 +37,11 @@ const { data, status, error, refetch } = useCvData(lang)
     />
 
     <template v-else-if="data">
-      <ProfileSection :profile="data.profile" :highlight-skills="data.highlight_skills" />
+      <ProfileSection :profile="data.profile" />
       <Separator class="max-w-5xl mx-auto" />
       <TimelineSection :experiences="data.experience" :education="data.education" />
       <Separator class="max-w-5xl mx-auto" />
+      <SkillsSection :highlight-skills="data.highlight_skills" />
 
       <section class="max-w-5xl mx-auto px-4 py-8">
         <Accordion type="single" collapsible class="border rounded-lg">
@@ -83,5 +85,5 @@ const { data, status, error, refetch } = useCvData(lang)
     </template>
   </main>
 
-  <AppFooter :version="data?.version ?? ''" :updated-at="data?.updated_at ?? 0" />
+  <AppFooter :version="data?.version ?? ''" :updated-at="data?.updated_at ?? 0" :social-profiles="data?.profile.contact.social_profiles" />
 </template>
