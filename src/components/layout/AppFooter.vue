@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { SocialProfile } from "@/types/cv";
 import { useLanguage } from "@/composables/useLanguage";
+import { useAnalytics } from "@/composables/useAnalytics";
 import { yearNow } from "@/lib/date";
 import dayjs from "dayjs";
 import { computed, type Component } from "vue";
@@ -18,6 +19,7 @@ const props = defineProps<{
 }>();
 
 const { t, lang } = useLanguage();
+const { trackEvent } = useAnalytics()
 const dateToNow = computed(() =>
   dayjs(props.updatedAt).locale(lang.value).fromNow(),
 );
@@ -30,6 +32,14 @@ const socialIconMap: Record<string, Component> = {
   Medium: MediumIcon,
   WhatsApp: WhatsAppIcon,
 };
+
+function onSocialClick(platform: string) {
+  trackEvent('social_click', { platform })
+}
+
+function onGitHubPagesClick() {
+  trackEvent('external_link_click', { url: 'https://pages.github.com/' })
+}
 </script>
 
 <template>
@@ -47,6 +57,7 @@ const socialIconMap: Record<string, Component> = {
             class="inline-flex align-middle items-center gap-1 text-primary hover:text-accent transition-colors"
             target="_blank"
             rel="external nofollow"
+            @click="onGitHubPagesClick"
           >
             Powered by
             <GitHubIcon :size="14" class="shrink-0" />
@@ -63,6 +74,7 @@ const socialIconMap: Record<string, Component> = {
           target="_blank"
           rel="noopener noreferrer"
           class="text-primary hover:text-accent transition-colors"
+          @click="onSocialClick(sp.label)"
         >
           <component
             :is="socialIconMap[sp.label]"

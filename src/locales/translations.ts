@@ -48,9 +48,9 @@ export const en: SectionLabels = {
   retry: 'Retry',
   present: 'Present',
   ongoing: 'Ongoing',
-  siteTitle: 'Pandawa Bagus Sudewa — CV',
+  siteTitle: 'Pandawa Bagus Sudewa — Curriculum Vitae',
   footerText: 'Pandawa Bagus Sudewa. All rights reserved.',
-  downloadResume: 'Download CV',
+  downloadResume: 'Download',
   latestUpdate: 'Latest update',
 }
 
@@ -76,8 +76,8 @@ export const id: SectionLabels = {
   retry: 'Coba Lagi',
   present: 'Sekarang',
   ongoing: 'Berlangsung',
-  siteTitle: 'Pandawa Bagus Sudewa — CV',
+  siteTitle: 'Pandawa Bagus Sudewa — Curriculum Vitae',
   footerText: 'Pandawa Bagus Sudewa. Hak cipta dilindungi.',
-  downloadResume: 'Unduh CV',
+  downloadResume: 'Unduh',
   latestUpdate: 'Pembaruan terakhir',
 }

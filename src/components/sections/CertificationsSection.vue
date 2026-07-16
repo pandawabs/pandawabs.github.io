@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { useLanguage } from '@/composables/useLanguage'
+import { useAnalytics } from '@/composables/useAnalytics'
 import { ExternalLink, Calendar } from '@lucide/vue'
 import { computed } from 'vue'
 import { formatDate } from '@/lib/date'
@@ -13,7 +14,12 @@ const props = defineProps<{
 }>()
 
 const { t, lang } = useLanguage()
+const { trackEvent } = useAnalytics()
 const reverseOrderedLicenses = computed(() => props.licenses.slice().reverse())
+
+function onCredentialClick(name: string) {
+  trackEvent('certification_click', { name })
+}
 </script>
 
 <template>
@@ -27,6 +33,7 @@ const reverseOrderedLicenses = computed(() => props.licenses.slice().reverse())
             target="_blank"
             rel="noopener noreferrer"
             class="hover:underline inline-flex items-center gap-1"
+            @click="onCredentialClick(lic.name)"
           >
             {{ lic.name }} <ExternalLink class="size-3 shrink-0" />
           </a>

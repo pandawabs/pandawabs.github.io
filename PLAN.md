@@ -59,6 +59,21 @@ Also define extended semantic tokens:
 
 Dark mode applied via `.dark` class on `<html>`.
 
+# Analytics (Google Analytics 4)
+
+- `vue-gtag` plugin with conditional loading (production only)
+- Measurement ID configured via `import.meta.env.PROD` guard
+- `src/composables/useAnalytics.ts` wraps gtag event calls, safe in dev mode
+- Tracked events:
+  - `download_resume` — resume CTA download (param: `language`)
+  - `social_click` — footer social icon clicks (param: `platform`)
+  - `external_link_click` — footer GitHub Pages credit link (param: `url`)
+  - `email_click` — profile email mailto link
+  - `certification_click` — certification credential links (param: `name`)
+  - `theme_toggle` — theme switch (param: `theme`)
+  - `language_switch` — EN/ID toggle (param: `language`)
+- Page views tracked automatically by vue-gtag on route changes
+
 # Sections (all data-driven from CV JSON)
 
 1. **Profile** — gradient cover banner, profile picture (Avatar), full name, headline, location, current job, summary paragraph, about card (birth, nationality, email). Social profiles moved to footer.

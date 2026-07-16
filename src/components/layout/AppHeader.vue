@@ -2,16 +2,28 @@
 import ThemeToggle from "@/components/ui-custom/ThemeToggle.vue";
 import LanguageSwitcher from "@/components/ui-custom/LanguageSwitcher.vue";
 import { useLanguage } from "@/composables/useLanguage";
+import { useAnalytics } from "@/composables/useAnalytics";
 import { useTheme } from '@/composables/useTheme'
 import { Download } from '@lucide/vue'
 import { Button } from '@/components/ui/button'
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from '@/components/ui/tooltip'
 
 const { lang, t } = useLanguage();
 const { theme } = useTheme()
+const { trackEvent } = useAnalytics()
 
 const pdfFiles: Record<string, string> = {
   en: '/Pandawa Bagus Sudewa Resume - 2026.pdf',
   id: '/Pandawa Bagus Sudewa Resume (Bahasa Indonesia) - 2026.pdf',
+}
+
+function onDownloadClick() {
+  trackEvent('download_resume', { language: lang.value })
 }
 </script>
 
@@ -37,18 +49,26 @@ const pdfFiles: Record<string, string> = {
         </svg>
       </a>
       <div class="flex items-center gap-3">
-        <Button
-          variant="outline"
-          size="sm"
-          :title="t().downloadResume"
-          as-child
-        >
-          <a :href="pdfFiles[lang]" download>
-            <Download class="size-4" />
-            <span class="hidden sm:inline">{{ t().downloadResume }}</span>
-          </a>
-        </Button>
         <LanguageSwitcher />
+        <TooltipProvider>
+          <Tooltip>
+            <TooltipTrigger as-child>
+              <Button
+                class="rounded-full"
+                variant="outline"
+                size="icon"
+                as-child
+              >
+                <a :href="pdfFiles[lang]" download @click="onDownloadClick">
+                  <Download class="size-4" />
+                </a>
+              </Button>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>{{ t().downloadResume }}</p>
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
         <ThemeToggle />
       </div>
     </div>
